@@ -1,0 +1,15 @@
+{
+ "creation": "2026-02-15 22:10:00.000000",
+ "docstatus": 0,
+ "doctype": "Client Script",
+ "dt": "PBR CIMB",
+ "enabled": 1,
+ "idx": 0,
+ "modified": "2026-02-15 22:10:00.000000",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Convert value to word CIMB",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "script": "// Function to convert numbers to words\nfunction numberToWords(amount) {\n    const words = [\n        'ZERO', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE', 'TEN',\n        'ELEVEN', 'TWELVE', 'THIRTEEN', 'FOURTEEN', 'FIFTEEN', 'SIXTEEN', 'SEVENTEEN', 'EIGHTEEN', 'NINETEEN', 'TWENTY',\n        'THIRTY', 'FORTY', 'FIFTY', 'SIXTY', 'SEVENTY', 'EIGHTY', 'NINETY', 'HUNDRED', 'THOUSAND', 'MILLION', 'BILLION'\n    ];\n\n    if (amount === 0) return 'ZERO ONLY';\n\n    let numberStr = amount.toString();\n    let [integerPart, decimalPart] = numberStr.split('.');\n    decimalPart = decimalPart || '00';\n\n    const intNum = parseInt(integerPart);\n    const decNum = parseInt(decimalPart);\n\n    let wordsStr = convertNumberToWords(intNum).trim() + ' ONLY';\n\n    return wordsStr;\n}\n\nfunction convertNumberToWords(num) {\n    const singleDigits = ['ZERO', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE'];\n    const teens = ['ELEVEN', 'TWELVE', 'THIRTEEN', 'FOURTEEN', 'FIFTEEN', 'SIXTEEN', 'SEVENTEEN', 'EIGHTEEN', 'NINETEEN'];\n    const tens = ['', 'TEN', 'TWENTY', 'THIRTY', 'FORTY', 'FIFTY', 'SIXTY', 'SEVENTY', 'EIGHTY', 'NINETY'];\n    \n    if (num < 10) return singleDigits[num];\n    if (num < 20 && num > 10) return teens[num - 11];\n    if (num < 100) return tens[Math.floor(num / 10)] + (num % 10 !== 0 ? '-' + singleDigits[num % 10] : '');\n    if (num < 1000) return singleDigits[Math.floor(num / 100)] + ' HUNDRED' + (num % 100 !== 0 ? ' ' + convertNumberToWords(num % 100) : '');\n    if (num < 1000000) return convertNumberToWords(Math.floor(num / 1000)) + ' THOUSAND' + (num % 1000 !== 0 ? ' ' + convertNumberToWords(num % 1000) : '');\n    if (num < 1000000000) return convertNumberToWords(Math.floor(num / 1000000)) + ' MILLION' + (num % 1000000 !== 0 ? ' ' + convertNumberToWords(num % 1000000) : '');\n    return convertNumberToWords(Math.floor(num / 1000000000)) + ' BILLION' + (num % 1000000000 !== 0 ? ' ' + convertNumberToWords(num % 1000000000) : '');\n}\n\nlet delayTimer;\n\nfrappe.ui.form.on('PBR CIMB', {\n    ringgit_malaysia: function(frm) {\n        if (delayTimer) clearTimeout(delayTimer); // Clear previous timer if exists\n\n        delayTimer = setTimeout(function() {\n            if (frm.doc.ringgit_malaysia) {\n                let amountInWords = numberToWords(parseFloat(frm.doc.ringgit_malaysia.replace(/,/g, '')));\n                frm.set_value('ringgit_malaysia', amountInWords);\n            }\n        }, 1300); // Adjust the delay time (in milliseconds) as needed\n    }\n});",
+ "view": "Form"
+}

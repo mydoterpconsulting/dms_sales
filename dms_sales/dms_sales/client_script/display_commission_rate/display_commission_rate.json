@@ -1,0 +1,15 @@
+{
+ "creation": "2026-02-15 22:10:00.000000",
+ "docstatus": 0,
+ "doctype": "Client Script",
+ "dt": "SA Commission Claim Form",
+ "enabled": 1,
+ "idx": 0,
+ "modified": "2026-02-15 22:10:00.000000",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Display commission rate",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "script": "frappe.ui.form.on('SA Commission Claim Form', {\n    refresh: function(frm) {\n        \n        var user_roles = frappe.user_roles;\n       var is_sales_advisor = user_roles.includes(\"SA Admin\") || user_roles.includes(\"SA Manager\");\n        // Add custom button to set commission_rate field\n        if (is_sales_advisor){\n        frm.add_custom_button(__('Set Commission Rate'), function() {\n            setCommissionRate(frm);\n        });\n        }\n    }\n});\n\n\nfunction setCommissionRate(frm) {\n    // Fetch all rows from booking_form child table\n    var bookingFormRows = frm.doc.booking_form || [];\n    var tier = frm.doc.tier;\n\n    // Fetch data from Car Model Variant DocType\n    frappe.call({\n        method: \"frappe.client.get_list\",\n        args: {\n            doctype: \"Car Model Variant\",\n            filters: {\n                // Filter to fetch only relevant Car Model Variants\n                model_code: [\"in\", bookingFormRows.map(row => row.model_code)]\n            },\n            fields: [\"model_code\", \"tier_1\", \"tier_2\", \"tier_3\", \"tier_4\"] // Include all tier fields\n        },\n        callback: function(response) {\n            console.log(response);\n            if (response && response.message) {\n                var carModelVariants = response.message;\n                \n                // Iterate through each row and set commission_rate field\n                bookingFormRows.forEach(function(row) {\n                    // Find corresponding Car Model Variant\n                    var matchingVariant = carModelVariants.find(variant => variant.model_code === row.model_code);\n                    \n                    if (matchingVariant) {\n                        // Set commission_rate based on the tier field\n                        if (tier == 'Tier A') {\n                            row.commission_rate = matchingVariant.tier_1;\n                        } else if (tier == 'Tier B') {\n                            row.commission_rate = matchingVariant.tier_2;\n                        } else if (tier == 'Tier C') {\n                            row.commission_rate = matchingVariant.tier_3;\n                        } else {\n                            row.commission_rate = matchingVariant.tier_4;\n                        }\n                    }\n                });\n\n                // Refresh the form to reflect changes\n                frm.refresh_fields('booking_form');\n            }\n        }\n    });\n}",
+ "view": "Form"
+}

@@ -1,0 +1,15 @@
+{
+ "creation": "2026-02-15 22:10:00.000000",
+ "docstatus": 0,
+ "doctype": "Client Script",
+ "dt": "Car Details And Checklist",
+ "enabled": 1,
+ "idx": 0,
+ "modified": "2026-02-15 22:10:00.000000",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Calculate Gear Total",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "script": "frappe.ui.form.on('Car Details And Checklist', {\n    refresh: function(frm) {\n        // Calculate sum of prices on form refresh\n        calculateTotalPrice(frm);\n        cal(frm);\n    }\n});\n\nfrappe.ui.form.on('Gear Up Item Table', {\n    gear_up_item_remove: function(frm, cdt, cdn) {\n        // Recalculate sum of prices when a row is removed\n        calculateTotalPrice(frm);\n        cal(frm);\n    },\n    gear_up_item_add: function(frm, cdt, cdn) {\n        // Recalculate sum of prices when a row is added\n        calculateTotalPrice(frm);\n        cal(frm);\n    },\n    price: function(frm, cdt, cdn) {\n        // Recalculate sum of prices when price field is changed\n        calculateTotalPrice(frm);\n        cal(frm);\n    },\n    quantity: function(frm, cdt, cdn) {\n        // Recalculate sum of prices when quantity field is changed\n        calculateTotalPrice(frm);\n        cal(frm);\n    },\n    total_price: function(frm, cdt, cdn) {\n        // Recalculate sum of prices when quantity field is changed\n        calculateTotalPrice(frm);\n        cal(frm);\n    }\n    \n    \n});\n\nfunction calculateTotalPrice(frm) {\n    var total = 0;\n    frm.doc.gear_up_item.forEach(function(row) {\n        total += flt(row.total_price);\n    });\n    frm.set_value('gear_up_total', total);\n    frm.set_value('gear_up', total);\n}\n\nfunction cal(frm) {\n    frm.doc.gear_up_item.forEach(function(row) {\n        if (row.price && row.quantity) {\n            var total_price = flt(row.price) * flt(row.quantity);\n            console.log(\"Updating total_price for row:\", row.name, \"with value:\", total_price);\n            frappe.model.set_value(row.doctype, row.name, 'total_price', total_price);\n        }\n    });\n    \n    // Refresh the entire table to ensure changes are visible\n    frm.refresh_field('gear_up_item');\n}",
+ "view": "Form"
+}
