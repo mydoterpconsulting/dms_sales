@@ -1,0 +1,15 @@
+{
+ "creation": "2026-02-15 22:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Client Script",
+ "dt": "SA Commission Claim Form",
+ "enabled": 1,
+ "idx": 0,
+ "modified": "2026-02-15 22:00:00.000000",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Calculate Sub Total in SA Claim",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "script": "frappe.ui.form.on('SA Commission Claim Form', {\n    refresh: function(frm) {\n        frm.cscript['sa_advance_commission'] = function() {\n            calculateSub(frm);\n        };\n        frm.cscript['short_payment_from_customer'] = function() {\n            calculateSub(frm);\n        };\n        frm.cscript['total_commission'] = function() {\n            calculateTotalSales(frm);\n        };\n        frm.cscript['total_deduction'] = function() {\n            calculateTotalSales(frm);\n            \n        };\n        frm.cscript['subtotal_deduction'] = function() {\n            calculateTotalSales(frm);\n            \n        };     \n    }\n});\n\n// Function to calculate sub_total based on net_selling_price and additional_perodua_accessories\nfunction calculateSub(frm) {\n    var sa_advance_commission = frm.doc.sa_advance_commission || 0;\n    var short_payment_from_customer = frm.doc.short_payment_from_customer || 0;\n\n    // Perform the calculation\n    var subTotal = sa_advance_commission + short_payment_from_customer;\n    // Set the calculated value to the sub_total field\n    frm.set_value('total_deduction', subTotal);\n}\n\n// Function to calculate total_sales_price based on sub_total and other fields\nfunction calculateTotalSales(frm) {\n    var total_commission = frm.doc.total_commission || 0;\n    var total_deduction = frm.doc.total_deduction || 0;\n    var misc = frm.doc.subtotal_deduction || 0;\n\n    // Perform the calculation\n    var totalSalesPrices = total_commission - total_deduction - misc;\n    // Set the calculated value to the total_sales_price field\n    frm.set_value('total_payout', totalSalesPrices);\n}",
+ "view": "Form"
+}

@@ -1,0 +1,15 @@
+{
+ "creation": "2026-02-15 22:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Client Script",
+ "dt": "Car Stock Request",
+ "enabled": 1,
+ "idx": 0,
+ "modified": "2026-02-15 22:00:00.000000",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Autosave Engine No and Chassis No into VSO",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "script": "frappe.ui.form.on('Car Stock Request', {\n    validate: function(frm) {\n        // When the Car Stock Request document is validated (i.e., before saving)\n        // Fetch the customer name linked to the Car Stock Request\n        var customer_name = frm.doc.customer_name;\n        var cs_id = frm.doc.name; // Car Stock Request ID\n        var engine_no = frm.doc.engine_no; // Engine number from Car Stock Request\n        var chassis_no = frm.doc.chassis_no; // Chassis number from Car Stock Request\n         var facilities = frm.doc.facilities;\n\n        // Filter VSO documents by customer name\n        frappe.call({\n            method: \"frappe.client.get_list\",\n            args: {\n                doctype: \"VSO\",\n                filters: {\n                    \"customer_name\": customer_name\n                }\n            },\n            callback: function(response) {\n                // If VSO documents matching the filter are found\n                if (response && response.message && response.message.length > 0) {\n                    // Update each VSO document with the csr_id, engine_no, and chassis_no from the Car Stock Request\n                    response.message.forEach(function(vso) {\n                        updateVSOWithCSRDetails(vso.name, cs_id, engine_no, chassis_no,facilities); // Pass cs_id, engine_no, and chassis_no here\n                    });\n                }\n            }\n        });\n    }\n});\n\nfunction updateVSOWithCSRDetails(vso_name, cs_id, engine_no, chassis_no, facilities) {\n    // Set the csr_id, engine_no, and chassis_no fields in the VSO with the Car Stock Request details\n    frappe.db.set_value('VSO', vso_name, {\n        'csr_id': cs_id,\n        'engine_no': engine_no,\n        'chassis_no': chassis_no,\n        'facilites': facilities\n    }).then(function(response) {\n        // Handle the response if needed\n    });\n}",
+ "view": "Form"
+}
