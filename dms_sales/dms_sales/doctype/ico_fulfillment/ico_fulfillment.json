@@ -1,0 +1,223 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-17 23:13:42.309784",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status",
+  "column_break_vzka",
+  "section_break_xjfu",
+  "customer_stock_request",
+  "ic_number",
+  "column_break_lvpx",
+  "vso_number",
+  "bank",
+  "sales_advisor",
+  "sa_name",
+  "fulfillment_details_section",
+  "urn",
+  "outlet",
+  "outlet_name",
+  "urn_test",
+  "column_break_xqdy",
+  "edd",
+  "ead",
+  "acceptance_date_time",
+  "car_details_section",
+  "model",
+  "variant",
+  "column_break_aqor",
+  "color",
+  "engine_number",
+  "chassis_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nPre-Allocated\nAllocated\nLock"
+  },
+  {
+   "fieldname": "column_break_vzka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xjfu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_stock_request",
+   "fieldtype": "Data",
+   "label": "Customer Name (Clear to Override)"
+  },
+  {
+   "fieldname": "ic_number",
+   "fieldtype": "Data",
+   "label": "IC Number"
+  },
+  {
+   "fieldname": "column_break_lvpx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vso_number",
+   "fieldtype": "Data",
+   "label": "VSO Number"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "sales_advisor",
+   "fieldtype": "Data",
+   "label": "Sales Advisor",
+   "options": "Sales Advisor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sa_name",
+   "fieldtype": "Link",
+   "label": "SA Name (Only Select For URN Lock)",
+   "options": "Sales Advisor"
+  },
+  {
+   "fieldname": "fulfillment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fulfillment Details"
+  },
+  {
+   "fieldname": "urn",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "URN NO"
+  },
+  {
+   "fieldname": "outlet",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Outlet"
+  },
+  {
+   "fieldname": "outlet_name",
+   "fieldtype": "Data",
+   "label": "Outlet Name"
+  },
+  {
+   "fieldname": "urn_test",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "URN (akan clear)"
+  },
+  {
+   "fieldname": "column_break_xqdy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "edd",
+   "fieldtype": "Date",
+   "label": "EDD"
+  },
+  {
+   "fieldname": "ead",
+   "fieldtype": "Date",
+   "label": "EAD"
+  },
+  {
+   "fieldname": "acceptance_date_time",
+   "fieldtype": "Datetime",
+   "label": "Acceptance Date"
+  },
+  {
+   "fieldname": "car_details_section",
+   "fieldtype": "Section Break",
+   "label": "Car Details"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "MODEL"
+  },
+  {
+   "fieldname": "variant",
+   "fieldtype": "Data",
+   "label": "VARIANT"
+  },
+  {
+   "fieldname": "column_break_aqor",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "COLOR"
+  },
+  {
+   "fieldname": "engine_number",
+   "fieldtype": "Data",
+   "label": "Engine Number"
+  },
+  {
+   "fieldname": "chassis_number",
+   "fieldtype": "Data",
+   "label": "Chassis Number"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Car Stock Request",
+   "link_fieldname": "ico_fulfillment"
+  }
+ ],
+ "make_attachments_public": 1,
+ "modified": "2025-06-11 22:38:08.254810",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "ICO Fulfillment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "read_only": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Allocated"
+  },
+  {
+   "color": "Orange",
+   "title": "Available"
+  }
+ ],
+ "title_field": "urn"
+}

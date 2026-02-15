@@ -1,0 +1,681 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-23 16:53:02.189912",
+ "custom": 1,
+ "default_email_template": "VSO Email to banker",
+ "default_print_format": "DC AUTO VSO",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "workflow_state",
+  "customer_details_tab",
+  "read_me_sa_manager",
+  "html_jfdy",
+  "column_break_fztn",
+  "column_break_obzg",
+  "html_ipdm",
+  "column_break_uxwt",
+  "section_break_rqoj",
+  "status",
+  "naming_series",
+  "sa_name",
+  "sa_id",
+  "column_break_ljlf",
+  "sa_phone",
+  "outlet_name",
+  "date_vso",
+  "month",
+  "customer_details_section",
+  "prospect_booking_form",
+  "vso_number",
+  "customer_name",
+  "csr_id",
+  "nric",
+  "column_break_bebc",
+  "customer_phone",
+  "testing_1",
+  "testing_2",
+  "testing_3",
+  "testing_4",
+  "section_break_ldnj",
+  "facilites",
+  "column_break_fiyb",
+  "order_details_tab",
+  "column_break_cjza",
+  "banker",
+  "attention_to",
+  "banker_phone",
+  "banker_email",
+  "column_break_nslm",
+  "bank",
+  "banker_branch",
+  "order_particulars_section",
+  "car_model",
+  "car_model_variant",
+  "car_model_color",
+  "model_code",
+  "engine_no",
+  "chassis_no",
+  "colour",
+  "column_break_ujbd",
+  "description",
+  "description2",
+  "engine_cc",
+  "sales_type",
+  "term",
+  "price_structures_section",
+  "net_selling_price",
+  "standard_accessories",
+  "carrier_licenseinspection_fee",
+  "admin_handling",
+  "metallic_paint",
+  "optional_accessories",
+  "additional_perodua_accessories",
+  "miscellaneous",
+  "sub_total1",
+  "less",
+  "sub_total",
+  "column_break_bhyb",
+  "road_tax",
+  "registration_fees",
+  "hpownership_claim",
+  "insurance_premium",
+  "total_sales_price",
+  "section_break_aaiz",
+  "own_financing",
+  "panel_cobranch",
+  "column_break_pgyq",
+  "amount_finance",
+  "finance_period_months",
+  "insurance_company",
+  "amended_from",
+  "quotation_tab",
+  "ref",
+  "selling_price_standard_body",
+  "road_tax2",
+  "ownership_claim",
+  "number_plate",
+  "retail_price_without_insurance",
+  "insurance_perodua_total_protect",
+  "total_otr_with_insurance",
+  "column_break_clnf",
+  "rebate_discount",
+  "booking_fee",
+  "loan_approved",
+  "balance_down_payment"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
+  },
+  {
+   "fieldname": "customer_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Customer Details",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('SA Manager')",
+   "fieldname": "read_me_sa_manager",
+   "fieldtype": "Section Break",
+   "label": "READ ME (SA MANAGER):",
+   "options": "<p>To approve VSO:</p>\n<ol>\n    <li>Click &quot;Actions&quot; button and select &quot;Approve&quot;.</li>\n</ol>\n<p>To reject VCO:</p>\n<ol>\n    <li>Click &quot;Actions&quot; button and select &quot;Reject&quot;.</li>\n</ol>"
+  },
+  {
+   "fieldname": "html_jfdy",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "options": "<p>To approve VSO:</p>\n<ol>\n    <li>Click &quot;Actions&quot; button and select &quot;Approve&quot;.</li>\n</ol>\n<p>To reject VCO:</p>\n<ol>\n    <li>Click &quot;Actions&quot; button and select &quot;Reject&quot;.</li>\n</ol>"
+  },
+  {
+   "fieldname": "column_break_fztn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_obzg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "html_ipdm",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "options": "<p>If &nbsp;your VSO status is &quot;Rejected&quot;:</p>\n<ol>\n    <li>Click &quot;Actions&quot; button and select &quot;Back To Draft&quot;.</li>\n    <li>Then click &quot;Actions&quot; button again and select &quot;Send For Approval&quot;.</li>\n</ol>\n<p><br></p>"
+  },
+  {
+   "fieldname": "column_break_uxwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rqoj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nSelected\nNot Selected"
+  },
+  {
+   "default": "VSO-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series",
+   "options": "VSO-.YYYY.-.#####"
+  },
+  {
+   "fetch_from": "prospect_booking_form.sa_name",
+   "fieldname": "sa_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SA Name"
+  },
+  {
+   "fetch_from": ".sa_id",
+   "fieldname": "sa_id",
+   "fieldtype": "Data",
+   "label": "SA ID"
+  },
+  {
+   "fieldname": "column_break_ljlf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": ".sa_phone",
+   "fieldname": "sa_phone",
+   "fieldtype": "Data",
+   "label": "SA Phone"
+  },
+  {
+   "fetch_from": ".outlet_code",
+   "fieldname": "outlet_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Outlet Name"
+  },
+  {
+   "fieldname": "date_vso",
+   "fieldtype": "Date",
+   "label": "Date VSO"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Month"
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "prospect_booking_form",
+   "fieldtype": "Link",
+   "label": "Prospect Booking Form",
+   "options": "Prospect Booking Form",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "prospect_booking_form.vso",
+   "fieldname": "vso_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "VSO Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "prospect_booking_form.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": ".customer_name",
+   "fieldname": "csr_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "CSR ID"
+  },
+  {
+   "fetch_from": "prospect_booking_form.customer_ic",
+   "fieldname": "nric",
+   "fieldtype": "Data",
+   "label": "NRIC"
+  },
+  {
+   "fieldname": "column_break_bebc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "prospect_booking_form.mobile_number",
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone"
+  },
+  {
+   "fieldname": "testing_1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Under Payment"
+  },
+  {
+   "fieldname": "testing_2",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Over Payment"
+  },
+  {
+   "fieldname": "testing_3",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Registration No"
+  },
+  {
+   "fieldname": "testing_4",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "section_break_ldnj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "facilites",
+   "fieldtype": "Data",
+   "label": "Facilites"
+  },
+  {
+   "fieldname": "column_break_fiyb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Order Details"
+  },
+  {
+   "fieldname": "column_break_cjza",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "banker",
+   "fieldtype": "Link",
+   "label": "Banker",
+   "options": "Banker"
+  },
+  {
+   "fetch_from": "banker.banker_name",
+   "fieldname": "attention_to",
+   "fieldtype": "Data",
+   "label": "Banker Name"
+  },
+  {
+   "fetch_from": "banker.banker_phone",
+   "fieldname": "banker_phone",
+   "fieldtype": "Data",
+   "label": "Banker Phone"
+  },
+  {
+   "fetch_from": "banker.banker_email",
+   "fieldname": "banker_email",
+   "fieldtype": "Data",
+   "label": "Banker Email"
+  },
+  {
+   "fieldname": "column_break_nslm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "banker.bank",
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fetch_from": "banker.bank_branch",
+   "fieldname": "banker_branch",
+   "fieldtype": "Data",
+   "label": "Banker Branch"
+  },
+  {
+   "fieldname": "order_particulars_section",
+   "fieldtype": "Section Break",
+   "label": "Order Particulars"
+  },
+  {
+   "fetch_from": "prospect_booking_form.car_model",
+   "fieldname": "car_model",
+   "fieldtype": "Data",
+   "label": "Car Model"
+  },
+  {
+   "fetch_from": "prospect_booking_form.car_model_variant",
+   "fieldname": "car_model_variant",
+   "fieldtype": "Link",
+   "label": "Car Model Variant",
+   "options": "Car Model Variant"
+  },
+  {
+   "fetch_from": ".car_model_variant",
+   "fieldname": "car_model_color",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Car model color "
+  },
+  {
+   "fetch_from": "prospect_booking_form.model_code",
+   "fieldname": "model_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model Code"
+  },
+  {
+   "fetch_from": ".",
+   "fieldname": "engine_no",
+   "fieldtype": "Data",
+   "label": "Engine No"
+  },
+  {
+   "fieldname": "chassis_no",
+   "fieldtype": "Data",
+   "label": "Chassis No"
+  },
+  {
+   "fetch_from": ".first_choice_color_link",
+   "fieldname": "colour",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Colour",
+   "options": "Car Model Color"
+  },
+  {
+   "fieldname": "column_break_ujbd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "prospect_booking_form.description",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fetch_from": ".description",
+   "fieldname": "description2",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Description2"
+  },
+  {
+   "fetch_from": "prospect_booking_form.engine_cc",
+   "fieldname": "engine_cc",
+   "fieldtype": "Data",
+   "label": "Engine CC"
+  },
+  {
+   "fieldname": "sales_type",
+   "fieldtype": "Select",
+   "label": "Sales Type",
+   "options": "\nCash\nHP"
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Select",
+   "label": "Term (Years)",
+   "options": "\n1 YEARS\n2 YEARS\n3 YEARS\n4 YEARS\n5 YEARS\n6 YEARS\n7 YEARS\n8 YEARS\n9 YEARS"
+  },
+  {
+   "fieldname": "price_structures_section",
+   "fieldtype": "Section Break",
+   "label": "Price Structures"
+  },
+  {
+   "fetch_from": "car_model_variant.approved_net_selling_price",
+   "fieldname": "net_selling_price",
+   "fieldtype": "Currency",
+   "label": "Govt. Approved Net Selling Price (inclusive of excise duty & number plate)"
+  },
+  {
+   "fetch_from": "car_model_variant.approved_standard_accessories",
+   "fieldname": "standard_accessories",
+   "fieldtype": "Currency",
+   "label": "Govt. Approved Standard Accessories"
+  },
+  {
+   "fetch_from": "car_model_variant.carrier_licenseinspection_fee",
+   "fieldname": "carrier_licenseinspection_fee",
+   "fieldtype": "Currency",
+   "label": "Carrier License/Inspection Fee"
+  },
+  {
+   "fetch_from": "car_model_variant.admin_handling",
+   "fieldname": "admin_handling",
+   "fieldtype": "Currency",
+   "label": "Admin Handling"
+  },
+  {
+   "fetch_from": "car_model_variant.metallic_paint",
+   "fieldname": "metallic_paint",
+   "fieldtype": "Currency",
+   "label": "Metallic Paint"
+  },
+  {
+   "fetch_from": "car_model_variant.optional_accessories",
+   "fieldname": "optional_accessories",
+   "fieldtype": "Currency",
+   "label": "Optional Accessories"
+  },
+  {
+   "fieldname": "additional_perodua_accessories",
+   "fieldtype": "Currency",
+   "label": "Additional Perodua Accessories"
+  },
+  {
+   "fetch_from": "car_model_variant.miscellaneous",
+   "fieldname": "miscellaneous",
+   "fieldtype": "Currency",
+   "label": "Miscellaneous"
+  },
+  {
+   "fetch_from": "car_model_variant.sub_total",
+   "fieldname": "sub_total1",
+   "fieldtype": "Currency",
+   "label": "Sub-Total"
+  },
+  {
+   "fetch_from": "car_model_variant.less",
+   "fieldname": "less",
+   "fieldtype": "Currency",
+   "label": "Less"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub-Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bhyb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "car_model_variant.labuan_malaysia_price",
+   "fieldname": "road_tax",
+   "fieldtype": "Currency",
+   "label": "Road Tax"
+  },
+  {
+   "fetch_from": "car_model_variant.langkawi_malaysia_price",
+   "fieldname": "registration_fees",
+   "fieldtype": "Currency",
+   "label": "Registration Fees"
+  },
+  {
+   "fetch_from": "car_model_variant.hpownership_claim",
+   "fieldname": "hpownership_claim",
+   "fieldtype": "Currency",
+   "label": "HP/Ownership Claim"
+  },
+  {
+   "fieldname": "insurance_premium",
+   "fieldtype": "Currency",
+   "label": "Insurance Premium"
+  },
+  {
+   "fieldname": "total_sales_price",
+   "fieldtype": "Currency",
+   "label": "Total Sales Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_aaiz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "own_financing",
+   "fieldtype": "Data",
+   "label": " Own Financing"
+  },
+  {
+   "fieldname": "panel_cobranch",
+   "fieldtype": "Link",
+   "label": "Panel Co/Branch",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "column_break_pgyq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_finance",
+   "fieldtype": "Currency",
+   "label": "Amount Finance"
+  },
+  {
+   "fieldname": "finance_period_months",
+   "fieldtype": "Select",
+   "label": "Finance Period (Months)",
+   "options": "0\n12\n24\n36\n48\n60\n72\n84\n96\n108"
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "label": "Insurance Company",
+   "options": "Insurance Company"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "VSO",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "quotation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quotation"
+  },
+  {
+   "fieldname": "ref",
+   "fieldtype": "Data",
+   "label": "Ref"
+  },
+  {
+   "fetch_from": "car_model_variant.approved_net_selling_price",
+   "fieldname": "selling_price_standard_body",
+   "fieldtype": "Currency",
+   "label": "Selling Price With Standard Accessories(Body Price)"
+  },
+  {
+   "fetch_from": "car_model_variant.labuan_malaysia_price",
+   "fieldname": "road_tax2",
+   "fieldtype": "Currency",
+   "label": "Road Tax"
+  },
+  {
+   "fetch_from": "car_model_variant.hpownership_claim",
+   "fieldname": "ownership_claim",
+   "fieldtype": "Currency",
+   "label": "Ownership Claim"
+  },
+  {
+   "default": "40.00",
+   "fieldname": "number_plate",
+   "fieldtype": "Currency",
+   "label": "Number Plate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "retail_price_without_insurance",
+   "fieldtype": "Currency",
+   "label": "Retail Price (without insurance)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_perodua_total_protect",
+   "fieldtype": "Currency",
+   "label": "Insurance (PERODUA TOTAL PROTECT)"
+  },
+  {
+   "fieldname": "total_otr_with_insurance",
+   "fieldtype": "Currency",
+   "label": "Total OTR With Insurance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_clnf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rebate_discount",
+   "fieldtype": "Currency",
+   "label": "Rebate Discount"
+  },
+  {
+   "fieldname": "booking_fee",
+   "fieldtype": "Currency",
+   "label": "Booking Fee"
+  },
+  {
+   "fieldname": "loan_approved",
+   "fieldtype": "Currency",
+   "label": "Loan Approved"
+  },
+  {
+   "fieldname": "balance_down_payment",
+   "fieldtype": "Currency",
+   "label": "Balance Down Payment",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-18 12:27:09.962599",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "VSO",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [],
+ "queue_in_background": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

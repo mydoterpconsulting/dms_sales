@@ -1,0 +1,197 @@
+{
+ "creation": "2024-01-21 01:42:21.085168",
+ "docstatus": 0,
+ "doctype": "Workflow",
+ "document_type": "Car Stock Request",
+ "idx": 0,
+ "is_active": 1,
+ "modified": "2025-12-09 15:45:11.676744",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "name": "Car Stock Request",
+ "override_status": 0,
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "send_email_alert": 0,
+ "states": [
+  {
+   "allow_edit": "Sales Advisor",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Draft"
+  },
+  {
+   "allow_edit": "Admin & Manager (CSR)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Allocation"
+  },
+  {
+   "allow_edit": "Admin & Manager (CSR)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Allocated",
+   "update_field": "allocation_status",
+   "update_value": "Yes"
+  },
+  {
+   "allow_edit": "Admin & Manager (CSR)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Rejected"
+  },
+  {
+   "allow_edit": "Admin & Manager (CSR)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Override & Rejected"
+  },
+  {
+   "allow_edit": "Admin & Manager (CSR)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Registered"
+  },
+  {
+   "allow_edit": "Sales Advisor",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Allocation"
+  },
+  {
+   "allow_edit": "Sales Advisor",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Allocated"
+  },
+  {
+   "allow_edit": "Sales Advisor",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Registered"
+  },
+  {
+   "allow_edit": "SA Admin (Commission)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Allocation"
+  },
+  {
+   "allow_edit": "SA Admin (Commission)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Rejected"
+  },
+  {
+   "allow_edit": "SA Admin (Commission)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Registered"
+  }
+ ],
+ "transitions": [
+  {
+   "action": "Send For Allocation",
+   "allow_self_approval": 1,
+   "allowed": "Sales Advisor",
+   "next_state": "Pending Allocation",
+   "state": "Draft"
+  },
+  {
+   "action": "Allocate",
+   "allow_self_approval": 1,
+   "allowed": "Admin & Manager (CSR)",
+   "next_state": "Allocated",
+   "state": "Pending Allocation"
+  },
+  {
+   "action": "Proceed to Override & Reject",
+   "allow_self_approval": 1,
+   "allowed": "Admin & Manager (CSR)",
+   "next_state": "Rejected",
+   "state": "Allocated"
+  },
+  {
+   "action": "Reject",
+   "allow_self_approval": 1,
+   "allowed": "Admin & Manager (CSR)",
+   "next_state": "Rejected",
+   "state": "Pending Allocation"
+  },
+  {
+   "action": "Back To Draft",
+   "allow_self_approval": 1,
+   "allowed": "Sales Advisor",
+   "next_state": "Draft",
+   "state": "Rejected"
+  },
+  {
+   "action": "Back To Draft",
+   "allow_self_approval": 1,
+   "allowed": "Sales Advisor",
+   "next_state": "Draft",
+   "state": "Override & Rejected"
+  },
+  {
+   "action": "Save to Registered",
+   "allow_self_approval": 1,
+   "allowed": "Admin & Manager (CSR)",
+   "next_state": "Registered",
+   "state": "Allocated"
+  },
+  {
+   "action": "Allocate",
+   "allow_self_approval": 1,
+   "allowed": "Admin & Manager (CSR)",
+   "next_state": "Allocated",
+   "state": "Registered"
+  },
+  {
+   "action": "Allocate",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Allocated",
+   "state": "Pending Allocation"
+  },
+  {
+   "action": "Proceed to Override & Reject",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Rejected",
+   "state": "Allocated"
+  },
+  {
+   "action": "Reject",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Rejected",
+   "state": "Pending Allocation"
+  },
+  {
+   "action": "Save to Registered",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Registered",
+   "state": "Allocated"
+  },
+  {
+   "action": "Allocate",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Allocated",
+   "state": "Registered"
+  }
+ ],
+ "workflow_name": "Car Stock Request",
+ "workflow_state_field": "workflow_state"
+}

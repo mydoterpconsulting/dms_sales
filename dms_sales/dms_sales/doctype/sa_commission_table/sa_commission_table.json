@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-18 23:33:08.297631",
+ "custom": 1,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "checklist",
+  "xero_invoice",
+  "booking_form",
+  "customer_name",
+  "model_code",
+  "commission_rate",
+  "booster",
+  "under_payment",
+  "over_payment",
+  "net_commission",
+  "column_break_ueta",
+  "registration_number",
+  "registration_date",
+  "model_code1",
+  "remark"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "checklist",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Checklist",
+   "options": "Car Details And Checklist"
+  },
+  {
+   "fieldname": "xero_invoice",
+   "fieldtype": "Attach",
+   "in_filter": 1,
+   "label": "XERO Invoice",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "checklist.vso_number",
+   "fieldname": "booking_form",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "VSO",
+   "options": "Car Details And Checklist"
+  },
+  {
+   "fetch_from": "checklist.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "checklist.model_code",
+   "fieldname": "model_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model"
+  },
+  {
+   "columns": 1,
+   "fieldname": "commission_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Commission",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "depends_on": "    ",
+   "fieldname": "booster",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Booster",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "checklist.under_payment",
+   "fieldname": "under_payment",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Under Payment"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "checklist.over_payment",
+   "fieldname": "over_payment",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Short/Over Payment",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "columns": 1,
+   "fieldname": "net_commission",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Subtotal Payout",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ueta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reg No"
+  },
+  {
+   "fetch_from": "checklist.registration_date",
+   "fieldname": "registration_date",
+   "fieldtype": "Data",
+   "label": "Reg Date"
+  },
+  {
+   "fetch_from": "checklist.car_model_color",
+   "fieldname": "model_code1",
+   "fieldtype": "Data",
+   "label": "Model Code"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-12 10:20:04.978882",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "SA Commission Table",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

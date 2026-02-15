@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-19 15:40:48.245597",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "gear_up_id",
+  "car_model",
+  "column_break_cghz",
+  "item_name",
+  "price_wm",
+  "price_em"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "gear_up_id",
+   "fieldtype": "Data",
+   "label": "Gear Up ID"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "car_model",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Car Model",
+   "options": "Car Model"
+  },
+  {
+   "fieldname": "column_break_cghz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "price_wm",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price WM"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "price_em",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price EM"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-29 11:19:22.723042",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Gear Up Item",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "item_name"
+}

@@ -1,0 +1,222 @@
+{
+ "creation": "2024-03-22 01:25:52.166799",
+ "docstatus": 0,
+ "doctype": "Workflow",
+ "document_type": "Car Details And Checklist",
+ "idx": 0,
+ "is_active": 1,
+ "modified": "2025-12-09 15:59:44.552223",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "name": "Car Details & Checklist Workflow",
+ "override_status": 0,
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "send_email_alert": 0,
+ "states": [
+  {
+   "allow_edit": "Sales Advisor",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Draft"
+  },
+  {
+   "allow_edit": "SA Admin",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Approval"
+  },
+  {
+   "allow_edit": "SA Admin (Commission)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Approval"
+  },
+  {
+   "allow_edit": "Sales Advisor",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Approval"
+  },
+  {
+   "allow_edit": "SA Admin",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Approved"
+  },
+  {
+   "allow_edit": "SA Admin (Commission)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Approved"
+  },
+  {
+   "allow_edit": "SA Admin",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Rejected",
+   "update_field": "checking",
+   "update_value": "Rejected"
+  },
+  {
+   "allow_edit": "SA Admin (Commission)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Rejected"
+  },
+  {
+   "allow_edit": "SA Admin",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Payment Disbursement"
+  },
+  {
+   "allow_edit": "SA Admin (Commission)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Payment Disbursement"
+  },
+  {
+   "allow_edit": "Sales Advisor",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Pending Payment Disbursement"
+  },
+  {
+   "allow_edit": "SA Admin",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Payment Disbursed",
+   "update_field": "checking",
+   "update_value": "Approved"
+  },
+  {
+   "allow_edit": "Sales Advisor",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Payment Disbursed"
+  },
+  {
+   "allow_edit": "SA Admin (Commission)",
+   "avoid_status_override": 0,
+   "doc_status": "0",
+   "is_optional_state": 0,
+   "state": "Payment Disbursed",
+   "update_field": "checking",
+   "update_value": "Approved"
+  }
+ ],
+ "transitions": [
+  {
+   "action": "Send For Approval",
+   "allow_self_approval": 1,
+   "allowed": "Sales Advisor",
+   "next_state": "Pending Approval",
+   "state": "Draft"
+  },
+  {
+   "action": "Pending Payment Disbursement",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin",
+   "next_state": "Pending Payment Disbursement",
+   "state": "Pending Approval"
+  },
+  {
+   "action": "Payment Disbursed",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin",
+   "next_state": "Payment Disbursed",
+   "state": "Pending Approval"
+  },
+  {
+   "action": "Payment Disbursed",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin",
+   "next_state": "Payment Disbursed",
+   "state": "Pending Payment Disbursement"
+  },
+  {
+   "action": "Reject",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin",
+   "next_state": "Rejected",
+   "state": "Pending Approval"
+  },
+  {
+   "action": "Back To Draft",
+   "allow_self_approval": 1,
+   "allowed": "Sales Advisor",
+   "next_state": "Draft",
+   "state": "Rejected"
+  },
+  {
+   "action": "Back To Draft",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin",
+   "next_state": "Draft",
+   "state": "Payment Disbursed"
+  },
+  {
+   "action": "Reject",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin",
+   "next_state": "Rejected",
+   "state": "Approved"
+  },
+  {
+   "action": "Pending Payment Disbursement",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Pending Payment Disbursement",
+   "state": "Pending Approval"
+  },
+  {
+   "action": "Payment Disbursed",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Payment Disbursed",
+   "state": "Pending Approval"
+  },
+  {
+   "action": "Payment Disbursed",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Payment Disbursed",
+   "state": "Pending Payment Disbursement"
+  },
+  {
+   "action": "Reject",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Rejected",
+   "state": "Pending Approval"
+  },
+  {
+   "action": "Back To Draft",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Draft",
+   "state": "Payment Disbursed"
+  },
+  {
+   "action": "Reject",
+   "allow_self_approval": 1,
+   "allowed": "SA Admin (Commission)",
+   "next_state": "Rejected",
+   "state": "Approved"
+  }
+ ],
+ "workflow_name": "Car Details & Checklist Workflow",
+ "workflow_state_field": "workflow_state"
+}

@@ -1,0 +1,635 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-19 15:28:09.999948",
+ "custom": 1,
+ "default_print_format": "Checklist",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "workflow_state",
+  "commission_claim_status",
+  "sa_claim_status",
+  "registration_date_new",
+  "reg_date_new",
+  "column_break_hrfg",
+  "naming_series",
+  "month",
+  "registration_date",
+  "status",
+  "checking",
+  "csid",
+  "column_break_efkm",
+  "sales_advisor",
+  "facilites",
+  "car_details_section",
+  "customer_name",
+  "customer_ic",
+  "vso_number",
+  "registration_number",
+  "finance",
+  "column_break_olax",
+  "car_model",
+  "color_choice",
+  "model_code",
+  "car_model_variant",
+  "car_model_color",
+  "chassis_number",
+  "engine_number",
+  "price_structure_tab",
+  "original_otr_rm_wo_ins",
+  "plate_number",
+  "road_tax",
+  "registration_fee",
+  "hp",
+  "runner_fee",
+  "gear_up",
+  "accessories_and_others",
+  "ins",
+  "tinted",
+  "free_gift",
+  "sub_total",
+  "column_break_igyz",
+  "loan_amount_rm",
+  "booking_fee",
+  "perodua_disc",
+  "sales_advisor_discount",
+  "sub_total2",
+  "remark",
+  "section_break_jlhk",
+  "nett_down_payment",
+  "under_payment",
+  "over_payment",
+  "column_break_cxeh",
+  "downpayment_date_and_remark",
+  "gear_up_section",
+  "gear_up_item",
+  "gear_up_total",
+  "registration_details_tab",
+  "registration_section",
+  "tender__buy_no_if_any",
+  "npt",
+  "column_break_fvfe",
+  "registration_state",
+  "sarawak",
+  "sabah",
+  "attachment_section",
+  "lou",
+  "insurance_cover_note",
+  "ca",
+  "booking_slip",
+  "column_break_foui",
+  "registration_checklist",
+  "ehak",
+  "ehakmilik",
+  "section_break_nqud",
+  "ncd",
+  "previous_plate_number",
+  "ncd_",
+  "column_break_focw",
+  "special_perils",
+  "windscreen",
+  "payment_verification_tab",
+  "ca_attachment",
+  "additional_disbursement_slip",
+  "ca_date",
+  "payment_disbursement_verification_status",
+  "payment_disbursement_date",
+  "column_break_sjxt",
+  "voc",
+  "vdo"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
+  },
+  {
+   "fieldname": "commission_claim_status",
+   "fieldtype": "Data",
+   "label": "Commission Claim Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sa_claim_status",
+   "fieldtype": "Data",
+   "label": "SA Claim Status",
+   "read_only": 1,
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "fieldname": "registration_date_new",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Registration Date"
+  },
+  {
+   "fieldname": "reg_date_new",
+   "fieldtype": "Date",
+   "label": "Registration Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hrfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "CHECK-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CHECK-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month",
+   "read_only": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Checklist",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "options": "Open\nSelected\nReject"
+  },
+  {
+   "depends_on": "eval:frappe.user.has_role('SA Admin')",
+   "fieldname": "checking",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Admin Checking",
+   "options": "Open\nApproved\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "csid",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "CSID"
+  },
+  {
+   "fieldname": "column_break_efkm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_advisor",
+   "fieldtype": "Data",
+   "label": "Sales Advisor",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "fieldname": "facilites",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "facilites"
+  },
+  {
+   "fieldname": "car_details_section",
+   "fieldtype": "Section Break",
+   "label": "Car Details"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_ic",
+   "fieldtype": "Data",
+   "label": "Customer IC",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vso_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "VSO Number",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finance",
+   "fieldtype": "Data",
+   "label": "Bank (LOU)"
+  },
+  {
+   "fieldname": "column_break_olax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "car_model",
+   "fieldtype": "Data",
+   "label": "Car Model",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "fieldname": "color_choice",
+   "fieldtype": "Data",
+   "label": "Color",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "fieldname": "model_code",
+   "fieldtype": "Data",
+   "label": "Model Type",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "fieldname": "car_model_variant",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Car Model Variant",
+   "options": "Car Model Variant",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "fieldname": "car_model_color",
+   "fieldtype": "Data",
+   "label": "Car Model Code",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "fieldname": "chassis_number",
+   "fieldtype": "Data",
+   "label": "Chassis Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "engine_number",
+   "fieldtype": "Data",
+   "label": "Engine Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "price_structure_tab",
+   "fieldtype": "Tab Break",
+   "label": "Price Structure"
+  },
+  {
+   "fieldname": "original_otr_rm_wo_ins",
+   "fieldtype": "Currency",
+   "label": "Original OTR (RM) Without Insurance",
+   "read_only": 1
+  },
+  {
+   "default": "40",
+   "fieldname": "plate_number",
+   "fieldtype": "Currency",
+   "label": "Plate Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "road_tax",
+   "fieldtype": "Currency",
+   "label": "Road Tax"
+  },
+  {
+   "fieldname": "registration_fee",
+   "fieldtype": "Currency",
+   "label": "Registration Fee"
+  },
+  {
+   "default": "50",
+   "fieldname": "hp",
+   "fieldtype": "Currency",
+   "label": "HP"
+  },
+  {
+   "default": "40",
+   "fieldname": "runner_fee",
+   "fieldtype": "Currency",
+   "label": "Runner Fee"
+  },
+  {
+   "fieldname": "gear_up",
+   "fieldtype": "Currency",
+   "label": "Gear Up"
+  },
+  {
+   "fieldname": "accessories_and_others",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Gear Up Copy"
+  },
+  {
+   "fieldname": "ins",
+   "fieldtype": "Currency",
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "tinted",
+   "fieldtype": "Currency",
+   "label": "Tinted"
+  },
+  {
+   "fieldname": "free_gift",
+   "fieldtype": "Data",
+   "label": "Free Gift"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_igyz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loan_amount_rm",
+   "fieldtype": "Currency",
+   "label": "Loan Amount (RM)"
+  },
+  {
+   "default": "100",
+   "fieldname": "booking_fee",
+   "fieldtype": "Currency",
+   "label": "Booking Fee"
+  },
+  {
+   "fieldname": "perodua_disc",
+   "fieldtype": "Currency",
+   "label": "Perodua Disc"
+  },
+  {
+   "fieldname": "sales_advisor_discount",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Sales Advisor Discount"
+  },
+  {
+   "fieldname": "sub_total2",
+   "fieldtype": "Currency",
+   "label": "Sub Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "section_break_jlhk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nett_down_payment",
+   "fieldtype": "Currency",
+   "label": "Nett Down Payment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "under_payment",
+   "fieldtype": "Currency",
+   "label": "Payment Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "over_payment",
+   "fieldtype": "Currency",
+   "label": "Short / Over Payment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cxeh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "downpayment_date_and_remark",
+   "fieldtype": "Table",
+   "label": "Downpayment Date And Remark",
+   "options": "Downpayment Table"
+  },
+  {
+   "fieldname": "gear_up_section",
+   "fieldtype": "Section Break",
+   "label": "Gear Up"
+  },
+  {
+   "fieldname": "gear_up_item",
+   "fieldtype": "Table",
+   "label": "Gear Up Item",
+   "options": "Gear Up Item Table"
+  },
+  {
+   "fieldname": "gear_up_total",
+   "fieldtype": "Currency",
+   "label": "Gear Up Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "registration_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Others"
+  },
+  {
+   "fieldname": "registration_section",
+   "fieldtype": "Section Break",
+   "label": "Registration"
+  },
+  {
+   "fieldname": "tender__buy_no_if_any",
+   "fieldtype": "Select",
+   "label": "Tender / Buy No (If Any)",
+   "options": "NO\nYES"
+  },
+  {
+   "fieldname": "npt",
+   "fieldtype": "Data",
+   "label": "Number Plate Tender"
+  },
+  {
+   "fieldname": "column_break_fvfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_state",
+   "fieldtype": "Select",
+   "label": "Registration State",
+   "options": "NOT APPLICABLE\nKUALA LUMPUR\nLABUAN\nPUTRAJAYA\nJOHOR\nKEDAH\nKELANTAN\nMELAKA\nNEGERI SEMBILAN\nPAHANG\nPERAK\nPERLIS\nPENANG\nSABAH\nSARAWAK\nSELANGOR\nTERENGGANU"
+  },
+  {
+   "fieldname": "sarawak",
+   "fieldtype": "Select",
+   "label": "Sarawak",
+   "options": "KUCHING\nSIBU\nMIRI\nSRI AMAN\nSARIKEI\nBINTULU\nLAMBANG\nKOTA SAMARAHAN\nKAPIT"
+  },
+  {
+   "fieldname": "sabah",
+   "fieldtype": "Select",
+   "label": "Sabah",
+   "options": "KOTA KINABALU\nSANDAKAN\nKUDAT\nTAWAU\nBEAUFORT\nKENINGAU\nLAHAD DATU"
+  },
+  {
+   "fieldname": "attachment_section",
+   "fieldtype": "Section Break",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "lou",
+   "fieldtype": "Attach",
+   "label": "LOU"
+  },
+  {
+   "fieldname": "insurance_cover_note",
+   "fieldtype": "Attach",
+   "label": "Insurance Cover Note"
+  },
+  {
+   "fieldname": "ca",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "CA"
+  },
+  {
+   "fieldname": "booking_slip",
+   "fieldtype": "Attach",
+   "label": "Booking Slip"
+  },
+  {
+   "fieldname": "column_break_foui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_checklist",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Registration Checklist"
+  },
+  {
+   "fieldname": "ehak",
+   "fieldtype": "Select",
+   "label": "EHAKMILIK",
+   "options": "NO\nYES"
+  },
+  {
+   "fieldname": "ehakmilik",
+   "fieldtype": "Attach",
+   "label": "EHAKMILIK"
+  },
+  {
+   "fieldname": "section_break_nqud",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ncd",
+   "fieldtype": "Select",
+   "label": "NCD",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "previous_plate_number",
+   "fieldtype": "Data",
+   "label": "Previous Plate Number"
+  },
+  {
+   "fieldname": "ncd_",
+   "fieldtype": "Percent",
+   "label": "NCD %"
+  },
+  {
+   "fieldname": "column_break_focw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "special_perils",
+   "fieldtype": "Select",
+   "label": "Special Perils",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "windscreen",
+   "fieldtype": "Select",
+   "label": "Windscreen",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "payment_verification_tab",
+   "fieldtype": "Tab Break",
+   "label": "Payment Disbursement"
+  },
+  {
+   "fieldname": "ca_attachment",
+   "fieldtype": "Attach",
+   "label": "Disbursement Slip"
+  },
+  {
+   "fieldname": "additional_disbursement_slip",
+   "fieldtype": "Attach",
+   "label": "Additional Disbursement Slip"
+  },
+  {
+   "fieldname": "ca_date",
+   "fieldtype": "Date",
+   "label": "Disbursement Date"
+  },
+  {
+   "fieldname": "payment_disbursement_verification_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Payment Disbursement Verification Status"
+  },
+  {
+   "fieldname": "payment_disbursement_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Payment Disbursement Date"
+  },
+  {
+   "fieldname": "column_break_sjxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "voc",
+   "fieldtype": "Attach",
+   "label": "VOC"
+  },
+  {
+   "fieldname": "vdo",
+   "fieldtype": "Attach",
+   "label": "VDO"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-09 10:45:00.894685",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Car Details And Checklist",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer_name"
+}

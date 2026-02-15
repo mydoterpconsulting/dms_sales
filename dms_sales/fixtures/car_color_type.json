@@ -1,0 +1,38 @@
+[
+ {
+  "name": "METALLIC",
+  "car_color_type": "METALLIC",
+  "doctype": "Car Color Type",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "R75",
+  "car_color_type": "R75",
+  "doctype": "Car Color Type",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "SOLID",
+  "car_color_type": "SOLID",
+  "doctype": "Car Color Type",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "SOLID/METALLIC",
+  "car_color_type": "SOLID/METALLIC",
+  "doctype": "Car Color Type",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "SPECIAL METALLIC",
+  "car_color_type": "SPECIAL METALLIC",
+  "doctype": "Car Color Type",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "TWO TONE COLOUR",
+  "car_color_type": "TWO TONE COLOUR",
+  "doctype": "Car Color Type",
+  "module": "DMS Sales"
+ }
+]

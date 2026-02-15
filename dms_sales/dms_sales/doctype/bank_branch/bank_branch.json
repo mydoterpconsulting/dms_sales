@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-29 22:53:57.346843",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "bank_branch",
+  "phone_number",
+  "column_break_sxmq",
+  "branch_address_1",
+  "branch_address_2",
+  "branch_address_3",
+  "city",
+  "postcode",
+  "state"
+ ],
+ "fields": [
+  {
+   "fieldname": "bank_branch",
+   "fieldtype": "Data",
+   "label": "Bank Branch"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_sxmq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_address_1",
+   "fieldtype": "Data",
+   "label": "Branch Address 1"
+  },
+  {
+   "fieldname": "branch_address_2",
+   "fieldtype": "Data",
+   "label": "Branch Address 2"
+  },
+  {
+   "fieldname": "branch_address_3",
+   "fieldtype": "Data",
+   "label": "Branch Address 3"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "postcode",
+   "fieldtype": "Data",
+   "label": "Postcode"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-29 10:55:40.140343",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Bank Branch",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "bank_branch"
+}

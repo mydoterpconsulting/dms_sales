@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-17 00:05:52.565413",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "bank",
+  "bank_location",
+  "type",
+  "column_break_hwfn",
+  "bank_address_1",
+  "bank_address_2",
+  "bank_address_3",
+  "postcode",
+  "city",
+  "state"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Link",
+   "label": "Series",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "label": "Bank",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "bank_location",
+   "fieldtype": "Data",
+   "label": "Bank Location "
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "column_break_hwfn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_address_1",
+   "fieldtype": "Data",
+   "label": "Bank Address 1"
+  },
+  {
+   "fieldname": "bank_address_2",
+   "fieldtype": "Data",
+   "label": "Bank Address 2"
+  },
+  {
+   "fieldname": "bank_address_3",
+   "fieldtype": "Data",
+   "label": "Bank Address 3"
+  },
+  {
+   "fieldname": "postcode",
+   "fieldtype": "Data",
+   "label": "Postcode"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-17 22:51:17.289087",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Bank Address",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "bank_location"
+}

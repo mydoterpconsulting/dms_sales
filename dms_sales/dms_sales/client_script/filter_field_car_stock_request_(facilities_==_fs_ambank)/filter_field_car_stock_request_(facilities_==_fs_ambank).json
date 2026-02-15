@@ -1,0 +1,15 @@
+{
+ "creation": "2024-05-10 19:08:12.600951",
+ "docstatus": 0,
+ "doctype": "Client Script",
+ "dt": "Floor Stock Facility Request AMB",
+ "enabled": 1,
+ "idx": 0,
+ "modified": "2024-05-11 18:14:33.319924",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Filter field Car Stock Request (facilities == Fs Ambank)",
+ "owner": "alif.jefrey@mydotconsulting.com",
+ "script": "frappe.ui.form.on('Floor Stock Facility Request AMB', {\n    onload: function(frm) {\n        setCarStockRequestFilter(frm);\n    },\n    facilities: function(frm) {\n        setCarStockRequestFilter(frm);\n    }\n});\n\nfunction setCarStockRequestFilter(frm) {\n    var child_table_fieldname = 'table_lhti'; // Replace 'table_lhti' with the actual fieldname of the child table\n    if (frm.doc[child_table_fieldname]) {\n        frm.fields_dict[child_table_fieldname].grid.get_field('car_stock_request').get_query = function(doc, cdt, cdn) {\n            var filters = [];\n            // Add filter for facilities field\n            filters.push(['facilities', '=', 'FS - AMB']);\n\n            // Fetch selected car stock requests\n            var selected_requests = frm.doc[child_table_fieldname].map(row => row.car_stock_request);\n\n            // Exclude selected car stock requests from the filter\n            if (selected_requests.length > 0) {\n                filters.push(['name', 'not in', selected_requests]);\n            }\n\n            return {\n                filters: filters\n            };\n        };\n    }\n}\n",
+ "view": "Form"
+}

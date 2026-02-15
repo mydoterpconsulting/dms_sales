@@ -1,0 +1,314 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-03-18 23:37:52.092303",
+ "custom": 1,
+ "default_print_format": "Print Format SA Commission Form",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_obmj",
+  "month",
+  "naming_series",
+  "date",
+  "status_hr",
+  "status_sa",
+  "column_break_nxzz",
+  "sales_advisor",
+  "sales_advisor_name",
+  "vso",
+  "testing",
+  "sa_email",
+  "for_sales_manager_use_only_section",
+  "tier",
+  "section_break_aaij",
+  "amended_from",
+  "booking_form",
+  "total_car",
+  "total_commission",
+  "total_booster",
+  "total_over",
+  "section_break_avqv",
+  "remark",
+  "column_break_glfg",
+  "deductions_section",
+  "sa_advance_commission",
+  "short_payment_from_customer",
+  "column_break_jkse",
+  "total_deduction",
+  "for_office_use_only_section",
+  "misc_table",
+  "subtotal_deduction",
+  "section_break_kikk",
+  "total_payout",
+  "column_break_mequ"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_obmj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Month on the commission must be same as month in the checklist.",
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "read_only_depends_on": "eval:frappe.user.has_role('DC HR')"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "series",
+   "options": "January\nFebruary\nMarch\nApril\nJune\nJuly"
+  },
+  {
+   "description": "Note: Use the current date for the commission document.",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Date",
+   "read_only_depends_on": "eval:frappe.user.has_role('DC HR')"
+  },
+  {
+   "fieldname": "status_hr",
+   "fieldtype": "Data",
+   "label": "Status HR",
+   "read_only": 1,
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')||frappe.user.has_role('SA Admin')||frappe.user.has_role('DC HR')"
+  },
+  {
+   "fieldname": "status_sa",
+   "fieldtype": "Data",
+   "label": "Status for SA",
+   "read_only": 1,
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')||frappe.user.has_role('DC HR')||frappe.user.has_role('SA Admin')"
+  },
+  {
+   "fieldname": "column_break_nxzz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_advisor",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Sales Advisor",
+   "options": "Sales Advisor"
+  },
+  {
+   "fieldname": "sales_advisor_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_standard_filter": 1,
+   "label": "Sales Advisor",
+   "read_only": 1,
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')||frappe.user.has_role('DC HR')"
+  },
+  {
+   "fieldname": "vso",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "vso",
+   "options": "VSO"
+  },
+  {
+   "fetch_from": "vso.month",
+   "fieldname": "testing",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "testing"
+  },
+  {
+   "fetch_from": "sales_advisor.sa_name",
+   "fieldname": "sa_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "SA Email"
+  },
+  {
+   "fieldname": "for_sales_manager_use_only_section",
+   "fieldtype": "Section Break",
+   "label": "For Sales Manager Use Only"
+  },
+  {
+   "fieldname": "tier",
+   "fieldtype": "Select",
+   "label": "Commission Tier",
+   "options": "\nTier A\nTier B\nTier C\nTier D",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')\r\n"
+  },
+  {
+   "fieldname": "section_break_aaij",
+   "fieldtype": "Section Break",
+   "label": "Commission"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SA Commission Claim Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "booking_form",
+   "fieldtype": "Table",
+   "options": "SA Commission Table"
+  },
+  {
+   "fieldname": "total_car",
+   "fieldtype": "Data",
+   "label": "Total Car",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_commission",
+   "fieldtype": "Currency",
+   "label": "Estimated Total Commission",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_booster",
+   "fieldtype": "Currency",
+   "label": "Estimated Total Booster",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_over",
+   "fieldtype": "Currency",
+   "label": "Estimated Total Short Payment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_avqv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "column_break_glfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deductions_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Deductions"
+  },
+  {
+   "fieldname": "sa_advance_commission",
+   "fieldtype": "Currency",
+   "label": "SA Advance Commission"
+  },
+  {
+   "fieldname": "short_payment_from_customer",
+   "fieldtype": "Currency",
+   "label": "Short Payment From Customer "
+  },
+  {
+   "fieldname": "column_break_jkse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_deduction",
+   "fieldtype": "Currency",
+   "label": "Subtotal Deduction"
+  },
+  {
+   "fieldname": "for_office_use_only_section",
+   "fieldtype": "Section Break",
+   "label": "For Office Use Only"
+  },
+  {
+   "fieldname": "misc_table",
+   "fieldtype": "Table",
+   "label": "Deduction",
+   "options": "MISC Deduction Table",
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')"
+  },
+  {
+   "fieldname": "subtotal_deduction",
+   "fieldtype": "Currency",
+   "label": "Subtotal Deduction",
+   "read_only": 1,
+   "read_only_depends_on": "eval:frappe.user.has_role('Sales Advisor')||frappe.user.has_role('DC HR')"
+  },
+  {
+   "fieldname": "section_break_kikk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_payout",
+   "fieldtype": "Currency",
+   "label": "Estimated Total Payout",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mequ",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2025-09-22 15:28:33.672495",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "SA Commission Claim Form",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Pending Review"
+  },
+  {
+   "color": "Blue",
+   "title": "Pending SA Manager Approval"
+  },
+  {
+   "color": "Blue",
+   "title": "Pending HR Approval"
+  },
+  {
+   "color": "Green",
+   "title": "HR Approved"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected by SA Manager"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected by HR"
+  },
+  {
+   "color": "Orange",
+   "title": "Pending SA Correction"
+  }
+ ]
+}

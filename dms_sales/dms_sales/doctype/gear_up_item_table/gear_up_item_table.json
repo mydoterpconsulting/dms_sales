@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-19 15:46:23.894337",
+ "custom": 1,
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gear_up_item",
+  "car_model",
+  "item_name",
+  "quantity",
+  "price",
+  "total_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "gear_up_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gear Up Item",
+   "options": "Gear Up Item"
+  },
+  {
+   "fetch_from": "gear_up_item.car_model",
+   "fieldname": "car_model",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Car Model",
+   "options": "Car Model"
+  },
+  {
+   "fetch_from": "gear_up_item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fetch_from": ".",
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fetch_from": "gear_up_item.price_wm",
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price WM"
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Price"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-29 21:06:20.506868",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Gear Up Item Table",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

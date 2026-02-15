@@ -1,0 +1,486 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-18 14:10:21.311479",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "prospect_detail_tab",
+  "status",
+  "column_break_nqsw",
+  "prospect_date",
+  "convert_date",
+  "month",
+  "section_break_nqby",
+  "naming_series",
+  "sa_name_select",
+  "sa_name",
+  "sa_name_data",
+  "sa_id",
+  "column_break_lsst",
+  "sa_phone",
+  "outlet_code",
+  "outlet_name",
+  "customer_details_section",
+  "vso",
+  "customer_name",
+  "prospect_number",
+  "test",
+  "column_break_dqkk",
+  "customer_ic",
+  "mobile_number",
+  "email",
+  "prospect_source",
+  "appointment_section",
+  "table_oiqg",
+  "car_detail_tab",
+  "car_details_section",
+  "car_model",
+  "car_model_variant",
+  "car_model_variant_data",
+  "car_color_type",
+  "model_code",
+  "description",
+  "engine_cc",
+  "registered_date",
+  "column_break_kqnr",
+  "first_choice_color_link",
+  "first_choice_color",
+  "second_choice_color",
+  "second_choice_color_link",
+  "third_choice_color",
+  "third_choice_color_link",
+  "fccc",
+  "sa_commission_claim_section",
+  "commission_claim_status",
+  "column_break_luju",
+  "section_break_sdqm",
+  "pic_name",
+  "column_break_vxow",
+  "pdpa_sign_flag",
+  "pdpa_sign_date",
+  "pdpa_verify_send_date",
+  "section_break_rsze",
+  "veh_status",
+  "column_break_gsjp",
+  "csr_id",
+  "car_stock_request"
+ ],
+ "fields": [
+  {
+   "fieldname": "prospect_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Prospect Detail"
+  },
+  {
+   "default": "PROSPECT",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "STATUS",
+   "options": "\nPROSPECT\nREADY TO BOOK\nBOOKED\nCANCELLED\nINVOICED\nREGISTERED\nALLOCATED"
+  },
+  {
+   "fieldname": "column_break_nqsw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prospect_date",
+   "fieldtype": "Date",
+   "label": "PROSPECT DATE"
+  },
+  {
+   "fieldname": "convert_date",
+   "fieldtype": "Date",
+   "label": "CONVERT DATE"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Month"
+  },
+  {
+   "fieldname": "section_break_nqby",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "sa_name_select",
+   "fieldtype": "Link",
+   "label": "SA NAME (SELECT)",
+   "options": "Sales Advisor",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sa_name_select.sa_name",
+   "fieldname": "sa_name",
+   "fieldtype": "Data",
+   "label": "SA NAME",
+   "options": "Sales Advisor",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sa_name.sa_name",
+   "fieldname": "sa_name_data",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "SA NAME DATA",
+   "read_only": 1
+  },
+  {
+   "fetch_from": ".sa_id",
+   "fieldname": "sa_id",
+   "fieldtype": "Data",
+   "label": "SA ID"
+  },
+  {
+   "fieldname": "column_break_lsst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sa_name.mobile_phone",
+   "fieldname": "sa_phone",
+   "fieldtype": "Data",
+   "label": "SA PHONE",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sa_name.outlet_name",
+   "fieldname": "outlet_code",
+   "fieldtype": "Data",
+   "label": "OUTLET NAME",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "sa_name.outlet_code",
+   "fieldname": "outlet_name",
+   "fieldtype": "Data",
+   "label": "OUTLET CODE",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "vso",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "VSO NO",
+   "unique": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "CUSTOMER NAME"
+  },
+  {
+   "fieldname": "prospect_number",
+   "fieldtype": "Data",
+   "label": "PROSPECT NO"
+  },
+  {
+   "fetch_from": "csr_id.customer_name",
+   "fieldname": "test",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "test",
+   "options": "Car Stock Request"
+  },
+  {
+   "fieldname": "column_break_dqkk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_ic",
+   "fieldtype": "Data",
+   "label": "CUSTOMER IC"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "MOBILE NO"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "EMAIL"
+  },
+  {
+   "fieldname": "prospect_source",
+   "fieldtype": "Select",
+   "label": "PROSPECT SOURCE",
+   "options": "\nEVENT\nFLYERS\nOTHERS\nWALK_IN\nONLINE\nREFERRAL"
+  },
+  {
+   "fieldname": "appointment_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Appointment"
+  },
+  {
+   "fieldname": "table_oiqg",
+   "fieldtype": "Table",
+   "options": "Appointment Details"
+  },
+  {
+   "fieldname": "car_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Car Detail"
+  },
+  {
+   "fieldname": "car_details_section",
+   "fieldtype": "Section Break",
+   "label": "Car Details"
+  },
+  {
+   "fieldname": "car_model",
+   "fieldtype": "Link",
+   "label": "MODEL",
+   "options": "Car Model"
+  },
+  {
+   "fieldname": "car_model_variant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CAR MODEL VARIANT",
+   "options": "Car Model Variant"
+  },
+  {
+   "fetch_from": "car_model_variant.car_variant",
+   "fieldname": "car_model_variant_data",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "CAR MODEL VARIANT Data"
+  },
+  {
+   "fetch_from": "car_model_variant.car_color_type",
+   "fieldname": "car_color_type",
+   "fieldtype": "Link",
+   "label": "CAR COLOR TYPE",
+   "options": "Car Color Type"
+  },
+  {
+   "fetch_from": "car_model_variant.model_code",
+   "fieldname": "model_code",
+   "fieldtype": "Data",
+   "label": "MODEL CODE"
+  },
+  {
+   "fetch_from": "car_model_variant.description",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "DESCRIPTION",
+   "options": "Car Model Variant"
+  },
+  {
+   "fetch_from": "car_model_variant.engine_cc",
+   "fieldname": "engine_cc",
+   "fieldtype": "Data",
+   "label": "ENGINE CC",
+   "options": "Car Model Variant"
+  },
+  {
+   "fieldname": "registered_date",
+   "fieldtype": "Date",
+   "label": "REGISTERED DATE"
+  },
+  {
+   "fieldname": "column_break_kqnr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": ".car_model_color_code",
+   "fieldname": "first_choice_color_link",
+   "fieldtype": "Link",
+   "label": "FIRST CHOICE COLOR",
+   "options": "Car Model Color"
+  },
+  {
+   "fetch_from": "first_choice_color_link.car_model_color_code",
+   "fieldname": "first_choice_color",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "FIRST CHOICE COLOR DATA"
+  },
+  {
+   "fieldname": "second_choice_color",
+   "fieldtype": "Link",
+   "label": "SECOND CHOICE COLOR",
+   "options": "Car Model Color"
+  },
+  {
+   "fetch_from": "second_choice_color.car_model_color_code",
+   "fieldname": "second_choice_color_link",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "SECOND CHOICE COLOR DATA"
+  },
+  {
+   "fieldname": "third_choice_color",
+   "fieldtype": "Link",
+   "label": "THIRD CHOICE COLOR",
+   "options": "Car Model Color"
+  },
+  {
+   "fetch_from": "third_choice_color.car_model_color_code",
+   "fieldname": "third_choice_color_link",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "THIRD CHOICE COLOR DATA"
+  },
+  {
+   "fieldname": "fccc",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "FIRST CHOICE COLOR CHANGE"
+  },
+  {
+   "fieldname": "sa_commission_claim_section",
+   "fieldtype": "Section Break",
+   "label": "SA Commission Claim"
+  },
+  {
+   "fieldname": "commission_claim_status",
+   "fieldtype": "Select",
+   "label": "Commission Claim Status",
+   "options": "Open\nSubmitted\nPaid"
+  },
+  {
+   "fieldname": "column_break_luju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_sdqm",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "pic_name",
+   "fieldtype": "Data",
+   "label": "PIC NAME"
+  },
+  {
+   "fieldname": "column_break_vxow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pdpa_sign_flag",
+   "fieldtype": "Select",
+   "label": "PDPA SIGN FLAG",
+   "options": "\nY\nN"
+  },
+  {
+   "fieldname": "pdpa_sign_date",
+   "fieldtype": "Date",
+   "label": "PDPA SIGN DATE",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "pdpa_verify_send_date",
+   "fieldtype": "Date",
+   "label": "PDPA VERIFY SEND DATE",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "section_break_rsze",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "veh_status",
+   "fieldtype": "Select",
+   "label": "VEH STATUS",
+   "options": "\nUNAVAILABLE\nVEHICLE ARRIVED AT DESTINATION\nVEHICLE COMPLETED\nVEHICLE SHIPPED\nVEHICLE SCHEDULED"
+  },
+  {
+   "fieldname": "column_break_gsjp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "csr_id",
+   "fieldtype": "Link",
+   "label": "CSR ID",
+   "options": "Car Stock Request",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "csr_id.urn",
+   "fieldname": "car_stock_request",
+   "fieldtype": "Data",
+   "label": "URN",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Car Stock Request",
+   "link_fieldname": "customer_name_link"
+  },
+  {
+   "link_doctype": "VSO",
+   "link_fieldname": "csr_id"
+  }
+ ],
+ "modified": "2025-12-06 11:17:27.352972",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Prospect Booking Form",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Booked"
+  },
+  {
+   "color": "Green",
+   "title": "Ready to Book"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  },
+  {
+   "color": "Purple",
+   "title": "Allocated"
+  },
+  {
+   "color": "Orange",
+   "title": "Prospect"
+  },
+  {
+   "color": "Yellow",
+   "title": "Invoiced"
+  }
+ ],
+ "title_field": "customer_name"
+}

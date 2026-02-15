@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-07 15:55:16.378988",
+ "custom": 1,
+ "default_print_format": "FS AMB MERGE",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "floor_stock_registration_tab",
+  "naming_series",
+  "date",
+  "column_break_mwew",
+  "bank_branch",
+  "car_details_section",
+  "car_stock_request",
+  "customer_name",
+  "nric_company_business_reg_no",
+  "year_make",
+  "column_break_eova",
+  "model",
+  "chassis",
+  "engine_no",
+  "loan_account_number"
+ ],
+ "fields": [
+  {
+   "fieldname": "floor_stock_registration_tab",
+   "fieldtype": "Tab Break",
+   "label": "Floor Stock Registration"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_mwew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_branch",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Bank Branch",
+   "options": "Bank Branch"
+  },
+  {
+   "fieldname": "car_details_section",
+   "fieldtype": "Section Break",
+   "label": "Car Details"
+  },
+  {
+   "fieldname": "car_stock_request",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Car Stock Request",
+   "options": "Car Stock Request"
+  },
+  {
+   "fetch_from": "car_stock_request.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "car_stock_request.ic_number",
+   "fieldname": "nric_company_business_reg_no",
+   "fieldtype": "Data",
+   "label": "NRIC / Company / Business Registration Number"
+  },
+  {
+   "fieldname": "year_make",
+   "fieldtype": "Data",
+   "label": "Year Make"
+  },
+  {
+   "fieldname": "column_break_eova",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "car_stock_request.car_model_variant",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fetch_from": "car_stock_request.chassis_no",
+   "fieldname": "chassis",
+   "fieldtype": "Data",
+   "label": "Chassis No"
+  },
+  {
+   "fetch_from": "car_stock_request.engine_no",
+   "fieldname": "engine_no",
+   "fieldtype": "Data",
+   "label": "Engine No"
+  },
+  {
+   "fieldname": "loan_account_number",
+   "fieldtype": "Data",
+   "label": "Loan Account Number"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-02 22:36:13.053197",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Floor Stock Vehicle AMB",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

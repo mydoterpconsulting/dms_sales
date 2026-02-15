@@ -1,0 +1,38 @@
+[
+ {
+  "name": "ALLIANZ",
+  "insurance_company_name": "ALLIANZ",
+  "doctype": "Insurance Company",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "GREAT EASTERN",
+  "insurance_company_name": "GREAT EASTERN",
+  "doctype": "Insurance Company",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PACIFIC INSURANCE",
+  "insurance_company_name": "PACIFIC INSURANCE",
+  "doctype": "Insurance Company",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "TOKIO MARINE",
+  "insurance_company_name": "TOKIO MARINE",
+  "doctype": "Insurance Company",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "TUNE PROTECT",
+  "insurance_company_name": "TUNE PROTECT",
+  "doctype": "Insurance Company",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "ZURICH",
+  "insurance_company_name": "ZURICH",
+  "doctype": "Insurance Company",
+  "module": "DMS Sales"
+ }
+]

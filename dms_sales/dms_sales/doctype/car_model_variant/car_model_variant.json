@@ -1,0 +1,257 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 17:14:32.508579",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "car_model",
+  "column_break_zegy",
+  "car_variant",
+  "car_model_pic",
+  "car_color_type",
+  "car_model_details_section",
+  "model_code",
+  "description",
+  "column_break_rkdd",
+  "engine_cc",
+  "commission_rate_section",
+  "tier_1",
+  "tier_2",
+  "column_break_rriv",
+  "tier_3",
+  "tier_4",
+  "car_model_variant_price_section",
+  "approved_net_selling_price",
+  "approved_standard_accessories",
+  "carrier_licenseinspection_fee",
+  "admin_handling",
+  "metallic_paint",
+  "optional_accessories",
+  "miscellaneous",
+  "sub_total",
+  "less",
+  "column_break_vfia",
+  "labuan_malaysia_price",
+  "langkawi_malaysia_price",
+  "hpownership_claim"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "car_model",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Car Model",
+   "options": "Car Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zegy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "car_variant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Car Variant",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "car_model_pic",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Car Model Picture"
+  },
+  {
+   "fieldname": "car_color_type",
+   "fieldtype": "Link",
+   "label": "Car Color Type",
+   "options": "Car Color Type"
+  },
+  {
+   "fieldname": "car_model_details_section",
+   "fieldtype": "Section Break",
+   "label": "Car Model Details"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "model_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model Code"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_rkdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "engine_cc",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Engine CC"
+  },
+  {
+   "fieldname": "commission_rate_section",
+   "fieldtype": "Section Break",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "tier_1",
+   "fieldtype": "Currency",
+   "label": "Tier A (1-6 Unit)"
+  },
+  {
+   "fieldname": "tier_2",
+   "fieldtype": "Currency",
+   "label": "Tier B (7-14 Unit)"
+  },
+  {
+   "fieldname": "column_break_rriv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tier_3",
+   "fieldtype": "Currency",
+   "label": "Tier C (15-24 Unit)"
+  },
+  {
+   "fieldname": "tier_4",
+   "fieldtype": "Currency",
+   "label": "Tier D (25 Unit & Above)"
+  },
+  {
+   "fieldname": "car_model_variant_price_section",
+   "fieldtype": "Section Break",
+   "label": "Price Structures"
+  },
+  {
+   "fieldname": "approved_net_selling_price",
+   "fieldtype": "Currency",
+   "label": "Govt. Approved Net Selling Price (inclusive of excise duty & number plate)"
+  },
+  {
+   "fieldname": "approved_standard_accessories",
+   "fieldtype": "Currency",
+   "label": "Govt. Approved Standard Accessories"
+  },
+  {
+   "fieldname": "carrier_licenseinspection_fee",
+   "fieldtype": "Currency",
+   "label": "Carrier License/Inspection Fee"
+  },
+  {
+   "fieldname": "admin_handling",
+   "fieldtype": "Currency",
+   "label": "Admin Handling"
+  },
+  {
+   "fieldname": "metallic_paint",
+   "fieldtype": "Currency",
+   "label": "Metallic Paint"
+  },
+  {
+   "fieldname": "optional_accessories",
+   "fieldtype": "Currency",
+   "label": "Optional Accessories"
+  },
+  {
+   "fieldname": "miscellaneous",
+   "fieldtype": "Currency",
+   "label": "Miscellaneous"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub-Total"
+  },
+  {
+   "fieldname": "less",
+   "fieldtype": "Currency",
+   "label": "Less"
+  },
+  {
+   "fieldname": "column_break_vfia",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "labuan_malaysia_price",
+   "fieldtype": "Currency",
+   "label": "Road Tax"
+  },
+  {
+   "fieldname": "langkawi_malaysia_price",
+   "fieldtype": "Currency",
+   "label": "Registration Fees"
+  },
+  {
+   "fieldname": "hpownership_claim",
+   "fieldtype": "Currency",
+   "label": "HP/Ownership Claim"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "car_model_pic",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-13 10:56:23.450975",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Car Model Variant",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SA Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "car_model",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "car_variant"
+}

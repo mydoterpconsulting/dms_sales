@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-07 16:11:31.622291",
+ "custom": 1,
+ "default_print_format": "FS RHB MERGE",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "floor_stock_registration_tab",
+  "naming_series",
+  "column_break_mwew",
+  "bank_branch",
+  "car_details_section",
+  "car_stock_request",
+  "customer_name",
+  "nric_company_business_reg_no",
+  "column_break_eova",
+  "loan_account_number",
+  "particulars_of_sola_redemption_section",
+  "redemption__settlement_date_required",
+  "model",
+  "year_make",
+  "chassis",
+  "engine_number",
+  "column_break_qqrg",
+  "sola_number",
+  "hp_serial_number__lou_number",
+  "tenure_of_loan_months",
+  "ownership_claim_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "floor_stock_registration_tab",
+   "fieldtype": "Tab Break",
+   "label": "Floor Stock Registration"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "column_break_mwew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_branch",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Bank Branch",
+   "options": "Bank Branch"
+  },
+  {
+   "fieldname": "car_details_section",
+   "fieldtype": "Section Break",
+   "label": "Particular of Hirers"
+  },
+  {
+   "fieldname": "car_stock_request",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Car Stock Request",
+   "options": "Car Stock Request"
+  },
+  {
+   "fetch_from": "car_stock_request.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "car_stock_request.ic_number",
+   "fieldname": "nric_company_business_reg_no",
+   "fieldtype": "Data",
+   "label": "Mykad / Passport Number"
+  },
+  {
+   "fieldname": "column_break_eova",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loan_account_number",
+   "fieldtype": "Data",
+   "label": "Loan Account Number"
+  },
+  {
+   "fieldname": "particulars_of_sola_redemption_section",
+   "fieldtype": "Section Break",
+   "label": "Particulars of SOLA Redemption"
+  },
+  {
+   "fieldname": "redemption__settlement_date_required",
+   "fieldtype": "Date",
+   "label": "Redemption / Settlement Date Required"
+  },
+  {
+   "fetch_from": "car_stock_request.car_model_variant",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Make & Model"
+  },
+  {
+   "fetch_from": "car_stock_request.car_model_variant",
+   "fieldname": "year_make",
+   "fieldtype": "Data",
+   "label": "Year Make"
+  },
+  {
+   "fetch_from": "car_stock_request.chassis_no",
+   "fieldname": "chassis",
+   "fieldtype": "Data",
+   "label": "Chassis"
+  },
+  {
+   "fetch_from": "car_stock_request.engine_no",
+   "fieldname": "engine_number",
+   "fieldtype": "Data",
+   "label": "Engine Number"
+  },
+  {
+   "fieldname": "column_break_qqrg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sola_number",
+   "fieldtype": "Data",
+   "label": "SOLA Number"
+  },
+  {
+   "fieldname": "hp_serial_number__lou_number",
+   "fieldtype": "Data",
+   "label": "HP Serial Number / LOU Number"
+  },
+  {
+   "fieldname": "tenure_of_loan_months",
+   "fieldtype": "Data",
+   "label": "Tenure of loan (Months)"
+  },
+  {
+   "fieldname": "ownership_claim_no",
+   "fieldtype": "Data",
+   "label": "Ownership Claim No"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-26 17:21:12.788795",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Floor Stock Vehicle RHB",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

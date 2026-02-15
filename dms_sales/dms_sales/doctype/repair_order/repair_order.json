@@ -1,0 +1,524 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-06-16 20:50:41.074938",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pdf_file",
+  "column_break_cbpm",
+  "section_break_preq",
+  "naming_series",
+  "appointment",
+  "walkin",
+  "column_break_bmfp",
+  "waiting",
+  "leave",
+  "column_break_vkum",
+  "vehicleregno",
+  "est_time",
+  "column_break_nxsq",
+  "id_delivery_note",
+  "id_delivery_note_1",
+  "id_delivery_note_2",
+  "section_break_absg",
+  "customer_name",
+  "contact_no",
+  "customer_group",
+  "staff_id1",
+  "column_break_sokt",
+  "chassis_number",
+  "engine_no",
+  "colour",
+  "model_variant",
+  "current_mileage",
+  "column_break_lfim",
+  "ro_no",
+  "arrival_time",
+  "registered_time",
+  "ro_date_time",
+  "vehicle_reg_date",
+  "warranty_exp_date",
+  "sender_name",
+  "sender_name_copy",
+  "sender_contact_no",
+  "amended_from",
+  "labour_section",
+  "labour",
+  "section_break_waut",
+  "column_break_funj",
+  "column_break_bsqc",
+  "sub_total_amt",
+  "sub_total_tax_amt",
+  "column_break_bcsn",
+  "est_total_hour",
+  "sub_total_all_amt",
+  "parts_information_section",
+  "parts_information",
+  "sublet_section",
+  "sublet",
+  "additional_parts_section",
+  "additional_parts",
+  "section_break_zzkw",
+  "edis_amount",
+  "other_dis",
+  "evoucher_amount",
+  "discount_amount",
+  "column_break_neny",
+  "est_total_amt",
+  "sub_total_parts",
+  "sub_total_sublet",
+  "sub_total_additional_parts",
+  "est_total_subtotal",
+  "sub_total_wo_sublet",
+  "section_break_uhds",
+  "customer_request",
+  "column_break_hwpa",
+  "action_taken",
+  "job_details_tab",
+  "service_advisor",
+  "branch",
+  "job_owner",
+  "mechanic_password",
+  "password_verified",
+  "column_break_fzww",
+  "service_type",
+  "service_time",
+  "additional_job",
+  "additional_job_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "pdf_file",
+   "fieldtype": "Attach",
+   "label": "Upload RO PDF"
+  },
+  {
+   "fieldname": "column_break_cbpm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_preq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Data",
+   "label": "Appointment"
+  },
+  {
+   "fieldname": "walkin",
+   "fieldtype": "Data",
+   "label": "Walk In"
+  },
+  {
+   "fieldname": "column_break_bmfp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "waiting",
+   "fieldtype": "Data",
+   "label": "Waiting"
+  },
+  {
+   "fieldname": "leave",
+   "fieldtype": "Data",
+   "label": "Leave"
+  },
+  {
+   "fieldname": "column_break_vkum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicleregno",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vehicle Reg. No"
+  },
+  {
+   "fieldname": "est_time",
+   "fieldtype": "Data",
+   "label": "Est Promised Time"
+  },
+  {
+   "fieldname": "column_break_nxsq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "id_delivery_note",
+   "fieldtype": "Data",
+   "label": "ID Delivery Note 1"
+  },
+  {
+   "fieldname": "id_delivery_note_1",
+   "fieldtype": "Data",
+   "label": "ID Delivery Note 2"
+  },
+  {
+   "fieldname": "id_delivery_note_2",
+   "fieldtype": "Data",
+   "label": "ID Delivery Note 3"
+  },
+  {
+   "fieldname": "section_break_absg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No"
+  },
+  {
+   "fieldname": "customer_group",
+   "fieldtype": "Data",
+   "label": "Customer Group"
+  },
+  {
+   "fieldname": "staff_id1",
+   "fieldtype": "Data",
+   "label": "Staff ID"
+  },
+  {
+   "fieldname": "column_break_sokt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "chassis_number",
+   "fieldtype": "Data",
+   "label": "Chassis Number"
+  },
+  {
+   "fieldname": "engine_no",
+   "fieldtype": "Data",
+   "label": "Engine Number"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Colour"
+  },
+  {
+   "fieldname": "model_variant",
+   "fieldtype": "Data",
+   "label": "Model Variant"
+  },
+  {
+   "fieldname": "current_mileage",
+   "fieldtype": "Data",
+   "label": "Current Mileage"
+  },
+  {
+   "fieldname": "column_break_lfim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ro_no",
+   "fieldtype": "Data",
+   "label": "RO No"
+  },
+  {
+   "fieldname": "arrival_time",
+   "fieldtype": "Data",
+   "label": "Arrival Time"
+  },
+  {
+   "fieldname": "registered_time",
+   "fieldtype": "Data",
+   "label": "Registered Time"
+  },
+  {
+   "fieldname": "ro_date_time",
+   "fieldtype": "Data",
+   "label": "RO Date/Time"
+  },
+  {
+   "fieldname": "vehicle_reg_date",
+   "fieldtype": "Data",
+   "label": "Vehicle Reg. Date"
+  },
+  {
+   "fieldname": "warranty_exp_date",
+   "fieldtype": "Data",
+   "label": "Warranty Exp Date"
+  },
+  {
+   "fieldname": "sender_name",
+   "fieldtype": "Data",
+   "label": "Sender Name"
+  },
+  {
+   "fieldname": "sender_name_copy",
+   "fieldtype": "Data",
+   "label": "Sender Name Copy"
+  },
+  {
+   "fieldname": "sender_contact_no",
+   "fieldtype": "Data",
+   "label": "Sender's Contact No"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Repair Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "labour_section",
+   "fieldtype": "Section Break",
+   "label": "Labour Information"
+  },
+  {
+   "fieldname": "labour",
+   "fieldtype": "Data",
+   "label": "Labour"
+  },
+  {
+   "fieldname": "section_break_waut",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_funj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bsqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_total_amt",
+   "fieldtype": "Currency",
+   "label": "Sub Total Amt w/o Tax (RM)"
+  },
+  {
+   "fieldname": "sub_total_tax_amt",
+   "fieldtype": "Currency",
+   "label": "Sub Total Tax Amt (RM)"
+  },
+  {
+   "fieldname": "column_break_bcsn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "est_total_hour",
+   "fieldtype": "Data",
+   "label": "Estimated Total Time (hour)"
+  },
+  {
+   "fieldname": "sub_total_all_amt",
+   "fieldtype": "Currency",
+   "label": "Sub Total Amt with Tax (RM)"
+  },
+  {
+   "fieldname": "parts_information_section",
+   "fieldtype": "Section Break",
+   "label": "Parts Information"
+  },
+  {
+   "fieldname": "parts_information",
+   "fieldtype": "Data",
+   "label": "Parts Information"
+  },
+  {
+   "fieldname": "sublet_section",
+   "fieldtype": "Section Break",
+   "label": "Sublet"
+  },
+  {
+   "fieldname": "sublet",
+   "fieldtype": "Data",
+   "label": "Sublet"
+  },
+  {
+   "fieldname": "additional_parts_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Parts"
+  },
+  {
+   "fieldname": "additional_parts",
+   "fieldtype": "Data",
+   "label": "Additional Parts"
+  },
+  {
+   "fieldname": "section_break_zzkw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "edis_amount",
+   "fieldtype": "Currency",
+   "label": "eDiscount Amount [RM] "
+  },
+  {
+   "fieldname": "other_dis",
+   "fieldtype": "Currency",
+   "label": "Other Discount [RM]"
+  },
+  {
+   "fieldname": "evoucher_amount",
+   "fieldtype": "Currency",
+   "label": "Total eVoucher Amount [RM]"
+  },
+  {
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount [RM]"
+  },
+  {
+   "fieldname": "column_break_neny",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "est_total_amt",
+   "fieldtype": "Currency",
+   "label": "Estimated Total Amt Payable [RM] "
+  },
+  {
+   "fieldname": "sub_total_parts",
+   "fieldtype": "Currency",
+   "label": "Sub Total Parts"
+  },
+  {
+   "fieldname": "sub_total_sublet",
+   "fieldtype": "Currency",
+   "label": "Sub Total Sublet"
+  },
+  {
+   "fieldname": "sub_total_additional_parts",
+   "fieldtype": "Currency",
+   "label": "Subs Total Additional Parts"
+  },
+  {
+   "fieldname": "est_total_subtotal",
+   "fieldtype": "Currency",
+   "label": "Estimated Total Amt Payable [RM] "
+  },
+  {
+   "fieldname": "sub_total_wo_sublet",
+   "fieldtype": "Currency",
+   "label": "Sub Total w/o sublet"
+  },
+  {
+   "fieldname": "section_break_uhds",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_request",
+   "fieldtype": "Small Text",
+   "label": "Customer Request"
+  },
+  {
+   "fieldname": "column_break_hwpa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Small Text",
+   "label": "Action Taken"
+  },
+  {
+   "fieldname": "job_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Job Details"
+  },
+  {
+   "fieldname": "service_advisor",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Service Advisor",
+   "options": "Service Advisor"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "job_owner",
+   "fieldtype": "Data",
+   "label": "Job Owner"
+  },
+  {
+   "fieldname": "mechanic_password",
+   "fieldtype": "Password",
+   "label": "Mechanic Password"
+  },
+  {
+   "default": "0",
+   "fieldname": "password_verified",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Password Verified"
+  },
+  {
+   "fieldname": "column_break_fzww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Data",
+   "label": "Service Type"
+  },
+  {
+   "fieldname": "service_time",
+   "fieldtype": "Duration",
+   "label": "Service Time"
+  },
+  {
+   "fieldname": "additional_job",
+   "fieldtype": "Data",
+   "label": "Additional Job"
+  },
+  {
+   "fieldname": "additional_job_time",
+   "fieldtype": "Duration",
+   "label": "Additional Job Time"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-16 21:25:24.401954",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Repair Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,15 @@
+{
+ "creation": "2024-01-01 23:15:40.692044",
+ "docstatus": 0,
+ "doctype": "Client Script",
+ "dt": "Car Booking",
+ "enabled": 1,
+ "idx": 0,
+ "modified": "2024-01-21 05:10:20.726561",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Testing",
+ "owner": "alif.jefrey@mydotconsulting.com",
+ "script": "frappe.ui.form.on('Car Booking', {\n    refresh: function (frm) {\n        // Add a trigger on the model field change event\n        frm.fields_dict['model'].get_query = function (doc, cdt, cdn) {\n            return {\n                filters: {\n                    // none\n                }\n            };\n        };\n\n        // Add a trigger on the model_type field change event\n        frm.fields_dict['model_type'].get_query = function (doc, cdt, cdn) {\n            // Get the selected model value\n            var model = locals[cdt][cdn].model;\n\n            // Return car model\n            return {\n                filters: {\n                    'car_model': model\n                }\n            };\n        };\n\n        // Add a trigger on the color field change event\n        frm.fields_dict['color'].get_query = function (doc, cdt, cdn) {\n            // Get the selected model value\n            var model = locals[cdt][cdn].model;\n\n            // Return car model color\n            return {\n                filters: {\n                    'car_model': model\n                }\n            };\n        };\n    }\n});\n",
+ "view": "Form"
+}

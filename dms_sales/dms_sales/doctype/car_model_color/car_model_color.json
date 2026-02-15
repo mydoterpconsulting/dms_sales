@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 17:25:18.106546",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_k61r",
+  "naming_series",
+  "car_model",
+  "car_model_variant",
+  "color_type",
+  "column_break_citi",
+  "car_model_color",
+  "car_model_color_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_k61r",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "car_model",
+   "fieldtype": "Link",
+   "label": "Car Model",
+   "options": "Car Model"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "car_model_variant",
+   "fieldtype": "Link",
+   "label": "Car Model Variant",
+   "options": "Car Model Variant"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "car_model_variant.car_color_type",
+   "fieldname": "color_type",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Color Type",
+   "options": "Car Color Type"
+  },
+  {
+   "fieldname": "column_break_citi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "car_model_color",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Car Model Color",
+   "options": "Car Model Color"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "car_model_color_code",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Car Model Color Code",
+   "options": "Car Model Color"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-01 11:09:52.228205",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Car Model Color",
+ "naming_rule": "By \"Naming Series\" field",
+ "nsm_parent_field": "parent_car_model_color",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "SA Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "car_model_color_code"
+}

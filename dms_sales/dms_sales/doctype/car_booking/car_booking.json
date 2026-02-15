@@ -1,0 +1,242 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-12-18 19:51:40.168553",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "car_booking_tab",
+  "purchase_details_section",
+  "naming_series",
+  "purchase_type",
+  "driving_location",
+  "column_break_hpwf",
+  "customer_category",
+  "model_selection_section",
+  "model",
+  "column_break_pngd",
+  "model_type",
+  "color",
+  "car_image",
+  "gear_up_add_on",
+  "gear_up_options_section",
+  "gear_up_exterior",
+  "gear_up_interior",
+  "section_break_dj5z",
+  "amended_from",
+  "customer_deta",
+  "customer_full_name",
+  "contact_number",
+  "email",
+  "column_break_eakx",
+  "address_line_1",
+  "address_line_2",
+  "city",
+  "postcode",
+  "state"
+ ],
+ "fields": [
+  {
+   "fieldname": "car_booking_tab",
+   "fieldtype": "Tab Break",
+   "label": "Car Booking"
+  },
+  {
+   "fieldname": "purchase_details_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "purchase_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Purchase Type",
+   "options": "Cash\nHire Purchase",
+   "reqd": 1
+  },
+  {
+   "fieldname": "driving_location",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Driving Location",
+   "options": "Peninsular Malaysia\nSabah\nSarawak\nLabuan\nLangkawi",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hpwf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Customer Category",
+   "options": "Own/Individual\nCompany",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model_selection_section",
+   "fieldtype": "Section Break",
+   "label": "Model Selection"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "label": "Model",
+   "options": "Car Model"
+  },
+  {
+   "fieldname": "column_break_pngd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model_type",
+   "fieldtype": "Link",
+   "label": "Model Type",
+   "options": "Car Model Variant"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Link",
+   "label": "Color",
+   "options": "Car Model Color"
+  },
+  {
+   "fieldname": "car_image",
+   "fieldtype": "Image",
+   "label": "Car Image",
+   "options": "Car Model Color"
+  },
+  {
+   "default": "0",
+   "fieldname": "gear_up_add_on",
+   "fieldtype": "Check",
+   "label": "Gear Up Add On"
+  },
+  {
+   "depends_on": "gear_up_add_on",
+   "fieldname": "gear_up_options_section",
+   "fieldtype": "Section Break",
+   "label": "Gear Up Options"
+  },
+  {
+   "fieldname": "gear_up_exterior",
+   "fieldtype": "Table",
+   "label": "Gear Up Exterior",
+   "options": "Gear Up Exterior"
+  },
+  {
+   "fieldname": "gear_up_interior",
+   "fieldtype": "Table",
+   "label": "Gear Up Interior",
+   "options": "Gear Up Interior"
+  },
+  {
+   "fieldname": "section_break_dj5z",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Car Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer_deta",
+   "fieldtype": "Tab Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "customer_full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Full Name",
+   "reqd": 1
+  },
+  {
+   "default": "+60- ",
+   "fieldname": "contact_number",
+   "fieldtype": "Phone",
+   "label": "Contact Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_eakx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "postcode",
+   "fieldtype": "Int",
+   "label": "Postcode",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-07 13:18:44.955586",
+ "modified_by": "amirul.zulkefli@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Car Booking",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

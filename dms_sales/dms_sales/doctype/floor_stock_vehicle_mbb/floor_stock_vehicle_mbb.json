@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-07 15:18:45.883270",
+ "custom": 1,
+ "default_print_format": "FS MBB Individu",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "floor_stock_registration_tab",
+  "naming_series",
+  "date",
+  "column_break_mwew",
+  "bank_branch",
+  "bank_address_1",
+  "bank_address_2",
+  "city",
+  "postcode",
+  "state",
+  "car_details_section",
+  "car_stock_request",
+  "customer_name",
+  "nric",
+  "model",
+  "chassis",
+  "engine_number",
+  "year_make",
+  "column_break_eova",
+  "sola_number",
+  "sola_amount",
+  "lou_loan_amount",
+  "total",
+  "tenure_of_loan_months",
+  "ownership_claim_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "floor_stock_registration_tab",
+   "fieldtype": "Tab Break",
+   "label": "Floor Stock Registration"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_mwew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_branch",
+   "fieldtype": "Link",
+   "label": "Bank Branch",
+   "options": "Bank Branch"
+  },
+  {
+   "fetch_from": "bank_branch.branch_address_1",
+   "fieldname": "bank_address_1",
+   "fieldtype": "Data",
+   "label": "Bank Address 1"
+  },
+  {
+   "fetch_from": "bank_branch.branch_address_2",
+   "fieldname": "bank_address_2",
+   "fieldtype": "Data",
+   "label": "Bank Address 2"
+  },
+  {
+   "fetch_from": "bank_branch.city",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fetch_from": "bank_branch.postcode",
+   "fieldname": "postcode",
+   "fieldtype": "Data",
+   "label": "Postcode"
+  },
+  {
+   "fetch_from": "bank_branch.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "car_details_section",
+   "fieldtype": "Section Break",
+   "label": "Car Details"
+  },
+  {
+   "fieldname": "car_stock_request",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Car Stock Request",
+   "options": "Car Stock Request"
+  },
+  {
+   "fetch_from": "car_stock_request.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "car_stock_request.ic_number",
+   "fieldname": "nric",
+   "fieldtype": "Data",
+   "label": "NRIC"
+  },
+  {
+   "fetch_from": "car_stock_request.car_model_variant",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fetch_from": "car_stock_request.chassis_no",
+   "fieldname": "chassis",
+   "fieldtype": "Data",
+   "label": "Chassis"
+  },
+  {
+   "fetch_from": "car_stock_request.engine_no",
+   "fieldname": "engine_number",
+   "fieldtype": "Data",
+   "label": "Engine Number"
+  },
+  {
+   "fieldname": "year_make",
+   "fieldtype": "Data",
+   "label": "Year Make"
+  },
+  {
+   "fieldname": "column_break_eova",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sola_number",
+   "fieldtype": "Data",
+   "label": "SOLA Number / Reference Number"
+  },
+  {
+   "fieldname": "sola_amount",
+   "fieldtype": "Currency",
+   "label": "SOLA Amount"
+  },
+  {
+   "fieldname": "lou_loan_amount",
+   "fieldtype": "Currency",
+   "label": "LOU (Loan Amount)"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "tenure_of_loan_months",
+   "fieldtype": "Int",
+   "label": "Tenure of Loan (Months)"
+  },
+  {
+   "fieldname": "ownership_claim_no",
+   "fieldtype": "Data",
+   "label": "Ownership Claim No."
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-25 12:32:14.488570",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "Floor Stock Vehicle MBB",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

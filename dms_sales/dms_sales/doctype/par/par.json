@@ -1,0 +1,697 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-04-29 22:39:32.224053",
+ "custom": 1,
+ "default_print_format": "PAR Merge No Cop and Sign",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "vso_number",
+  "vdo_ct_number",
+  "vehicle_invoice",
+  "vehicle_registration_no",
+  "vehicle_registration_date",
+  "column_break_crah",
+  "sales_advisor",
+  "sales_advisor_ic",
+  "sales_advisor_phone",
+  "branch",
+  "customer_section",
+  "customer_name",
+  "customer_address_line_1",
+  "customer_address_line_2",
+  "customer_address_line_3",
+  "postcode",
+  "city",
+  "state",
+  "address",
+  "column_break_bjam",
+  "customer_id",
+  "customer_ic",
+  "order_particulars_section",
+  "model_code",
+  "engine_number",
+  "chassis_number",
+  "colour",
+  "column_break_aono",
+  "description",
+  "engine_cc",
+  "sales_type",
+  "term",
+  "finance_section",
+  "others",
+  "panel_co_branch1",
+  "panel_co_branch",
+  "amount_financed",
+  "finance_period",
+  "column_break_rxae",
+  "insurance_company",
+  "agent_code",
+  "cover_note",
+  "date_issued",
+  "price_structure_tab",
+  "govt_approved_net_selling_price",
+  "gasa",
+  "metallic_paint",
+  "carrier_license__inspection_fee",
+  "accessory_package1",
+  "total_additional_perodua_accessories_apa",
+  "admin_handling_charges",
+  "installation_cost",
+  "promotional_discount",
+  "sub_total_sales_price",
+  "sub_total",
+  "column_break_deys",
+  "road_tax",
+  "registration_fee",
+  "hp_ownership_claim",
+  "insurance_premium",
+  "accessory_package2",
+  "total_sales_price",
+  "net_invoice_value",
+  "for_dc_auto_services_section",
+  "add_hp_settlement",
+  "less_deposit_s_paid",
+  "receipt_number__date",
+  "total_amount_due",
+  "column_break_txvu",
+  "from_to_customer",
+  "from_finance_company",
+  "admin_tab",
+  "bank_address_section",
+  "bank_location",
+  "bank_name",
+  "column_break_piim",
+  "bank_address_1",
+  "bank_address_2",
+  "bank_address_3",
+  "postcode1",
+  "city1",
+  "insurance_section",
+  "agency_code",
+  "period_of_takaful_from",
+  "period_of_takaful_to",
+  "cubic_capacity",
+  "setting_capacity_including_driver",
+  "year_of_manufacture",
+  "sum_covered",
+  "excess",
+  "renewal_of_certificate_no",
+  "named_drivers",
+  "column_break_axzp",
+  "basic_contribution",
+  "ncd",
+  "extra_benefits",
+  "jumlah_kecil",
+  "service_tax",
+  "stamp_duty",
+  "total_payable",
+  "act_contribution",
+  "e_hakmilik_section",
+  "hp_serial_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Series"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "vso_number",
+   "fieldtype": "Data",
+   "label": "VSO Number"
+  },
+  {
+   "fieldname": "vdo_ct_number",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "VDO/CT Number"
+  },
+  {
+   "fieldname": "vehicle_invoice",
+   "fieldtype": "Data",
+   "label": "Vehicle Invoice"
+  },
+  {
+   "fieldname": "vehicle_registration_no",
+   "fieldtype": "Data",
+   "label": "Vehicle Registration No"
+  },
+  {
+   "fieldname": "vehicle_registration_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Vehicle Registration Date"
+  },
+  {
+   "fieldname": "column_break_crah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_advisor",
+   "fieldtype": "Data",
+   "label": "Sales Advisor"
+  },
+  {
+   "fieldname": "sales_advisor_ic",
+   "fieldtype": "Data",
+   "label": "Sales Advisor IC"
+  },
+  {
+   "fieldname": "sales_advisor_phone",
+   "fieldtype": "Data",
+   "label": "Sales Advisor Phone"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Branch"
+  },
+  {
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "label": "Customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "customer_address_line_1",
+   "fieldtype": "Data",
+   "label": "Customer Address Line 1"
+  },
+  {
+   "fieldname": "customer_address_line_2",
+   "fieldtype": "Data",
+   "label": "Customer Address Line 2"
+  },
+  {
+   "fieldname": "customer_address_line_3",
+   "fieldtype": "Data",
+   "label": "Customer Address Line 3"
+  },
+  {
+   "fieldname": "postcode",
+   "fieldtype": "Data",
+   "label": "Postcode"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Customer Address"
+  },
+  {
+   "fieldname": "column_break_bjam",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_id",
+   "fieldtype": "Data",
+   "label": "Customer ID"
+  },
+  {
+   "fieldname": "customer_ic",
+   "fieldtype": "Data",
+   "label": "Customer IC"
+  },
+  {
+   "fieldname": "order_particulars_section",
+   "fieldtype": "Section Break",
+   "label": "Order Particulars"
+  },
+  {
+   "fieldname": "model_code",
+   "fieldtype": "Data",
+   "label": "Model Code"
+  },
+  {
+   "fieldname": "engine_number",
+   "fieldtype": "Data",
+   "label": "Engine Number"
+  },
+  {
+   "fieldname": "chassis_number",
+   "fieldtype": "Data",
+   "label": "Chassis Number"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Data",
+   "label": "Colour"
+  },
+  {
+   "fieldname": "column_break_aono",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "engine_cc",
+   "fieldtype": "Data",
+   "label": "Engine CC"
+  },
+  {
+   "fieldname": "sales_type",
+   "fieldtype": "Data",
+   "label": "Sales Type"
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Data",
+   "label": "Term"
+  },
+  {
+   "fieldname": "finance_section",
+   "fieldtype": "Section Break",
+   "label": "Finance"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "panel_co_branch1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Panel Co. / Branch"
+  },
+  {
+   "fieldname": "panel_co_branch",
+   "fieldtype": "Link",
+   "label": "Panel Co. / Branch",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "amount_financed",
+   "fieldtype": "Currency",
+   "label": "Amount Financed"
+  },
+  {
+   "fieldname": "finance_period",
+   "fieldtype": "Data",
+   "label": "Finance Period"
+  },
+  {
+   "fieldname": "column_break_rxae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "TAKAFUL IKHLAS GENERAL BERHAD",
+   "fieldname": "insurance_company",
+   "fieldtype": "Data",
+   "label": "Insurance Company"
+  },
+  {
+   "default": "GR08937",
+   "fieldname": "agent_code",
+   "fieldtype": "Data",
+   "label": "Agent Code"
+  },
+  {
+   "fieldname": "cover_note",
+   "fieldtype": "Data",
+   "label": "Cover Note"
+  },
+  {
+   "fieldname": "date_issued",
+   "fieldtype": "Date",
+   "label": "Date Issued"
+  },
+  {
+   "fieldname": "price_structure_tab",
+   "fieldtype": "Tab Break",
+   "label": "Price Structure"
+  },
+  {
+   "fieldname": "govt_approved_net_selling_price",
+   "fieldtype": "Currency",
+   "label": "Govt. Approved Net Selling Price"
+  },
+  {
+   "default": "0",
+   "fieldname": "gasa",
+   "fieldtype": "Currency",
+   "label": "(include GASA, Excise Duty, Sales Tax &amp; number plate)"
+  },
+  {
+   "default": "0",
+   "fieldname": "metallic_paint",
+   "fieldtype": "Currency",
+   "label": "Metallic Paint"
+  },
+  {
+   "default": "0",
+   "fieldname": "carrier_license__inspection_fee",
+   "fieldtype": "Currency",
+   "label": "Carrier License / Inspection Fee"
+  },
+  {
+   "default": "0",
+   "fieldname": "accessory_package1",
+   "fieldtype": "Currency",
+   "label": "Accessory Package"
+  },
+  {
+   "fieldname": "total_additional_perodua_accessories_apa",
+   "fieldtype": "Currency",
+   "label": "Total Additional Perodua Accessories (APA)"
+  },
+  {
+   "default": "0",
+   "fieldname": "admin_handling_charges",
+   "fieldtype": "Currency",
+   "label": "Admin Handling Charges"
+  },
+  {
+   "default": "0",
+   "fieldname": "installation_cost",
+   "fieldtype": "Currency",
+   "label": "Installation Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "promotional_discount",
+   "fieldtype": "Currency",
+   "label": "Promotional Discount"
+  },
+  {
+   "fieldname": "sub_total_sales_price",
+   "fieldtype": "Currency",
+   "label": "Sub Total Sales Price"
+  },
+  {
+   "fieldname": "sub_total",
+   "fieldtype": "Currency",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "column_break_deys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "road_tax",
+   "fieldtype": "Currency",
+   "label": "Road Tax"
+  },
+  {
+   "fieldname": "registration_fee",
+   "fieldtype": "Currency",
+   "label": "Registration Fee"
+  },
+  {
+   "fieldname": "hp_ownership_claim",
+   "fieldtype": "Currency",
+   "label": "HP Ownership Claim"
+  },
+  {
+   "fieldname": "insurance_premium",
+   "fieldtype": "Currency",
+   "label": "Insurance Premium"
+  },
+  {
+   "default": "0",
+   "fieldname": "accessory_package2",
+   "fieldtype": "Currency",
+   "label": "Accessory Package"
+  },
+  {
+   "fieldname": "total_sales_price",
+   "fieldtype": "Currency",
+   "label": "Total Sales Price"
+  },
+  {
+   "fieldname": "net_invoice_value",
+   "fieldtype": "Currency",
+   "label": "Net Invoice Value"
+  },
+  {
+   "fieldname": "for_dc_auto_services_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_hp_settlement",
+   "fieldtype": "Currency",
+   "label": "Add HP Settlement of Trade-In"
+  },
+  {
+   "default": "0",
+   "fieldname": "less_deposit_s_paid",
+   "fieldtype": "Currency",
+   "label": "Less Deposit (S) Paid"
+  },
+  {
+   "default": "0",
+   "fieldname": "receipt_number__date",
+   "fieldtype": "Currency",
+   "label": "Receipt Number / Date"
+  },
+  {
+   "fieldname": "total_amount_due",
+   "fieldtype": "Currency",
+   "label": "Total Amount Due"
+  },
+  {
+   "fieldname": "column_break_txvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_to_customer",
+   "fieldtype": "Currency",
+   "label": "From (To) Customer"
+  },
+  {
+   "fieldname": "from_finance_company",
+   "fieldtype": "Currency",
+   "label": "From Finance Company"
+  },
+  {
+   "fieldname": "admin_tab",
+   "fieldtype": "Tab Break",
+   "label": "Admin"
+  },
+  {
+   "fieldname": "bank_address_section",
+   "fieldtype": "Section Break",
+   "label": "Bank Address"
+  },
+  {
+   "fieldname": "bank_location",
+   "fieldtype": "Link",
+   "label": "Bank Location",
+   "options": "Bank Address"
+  },
+  {
+   "fetch_from": "bank_location.bank",
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "column_break_piim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "bank_location.bank_address_1",
+   "fieldname": "bank_address_1",
+   "fieldtype": "Data",
+   "label": "Bank Address 1"
+  },
+  {
+   "fetch_from": "bank_location.bank_address_2",
+   "fieldname": "bank_address_2",
+   "fieldtype": "Data",
+   "label": "Bank Address 2"
+  },
+  {
+   "fetch_from": "bank_location.bank_address_3",
+   "fieldname": "bank_address_3",
+   "fieldtype": "Data",
+   "label": "Bank Address 3"
+  },
+  {
+   "fetch_from": "bank_location.postcode",
+   "fieldname": "postcode1",
+   "fieldtype": "Data",
+   "label": "Postcode"
+  },
+  {
+   "fetch_from": "bank_location.city",
+   "fieldname": "city1",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "insurance_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "agency_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Agency Code"
+  },
+  {
+   "fieldname": "period_of_takaful_from",
+   "fieldtype": "Date",
+   "label": "Period of Takaful (From)"
+  },
+  {
+   "fieldname": "period_of_takaful_to",
+   "fieldtype": "Date",
+   "label": "Period of Takaful (To)"
+  },
+  {
+   "fieldname": "cubic_capacity",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Cubic Capacity"
+  },
+  {
+   "fieldname": "setting_capacity_including_driver",
+   "fieldtype": "Data",
+   "label": "Setting capacity including driver"
+  },
+  {
+   "fieldname": "year_of_manufacture",
+   "fieldtype": "Data",
+   "label": "Year of Manufacture"
+  },
+  {
+   "fieldname": "sum_covered",
+   "fieldtype": "Currency",
+   "label": "Sum Covered"
+  },
+  {
+   "default": "0",
+   "fieldname": "excess",
+   "fieldtype": "Currency",
+   "label": "Excess"
+  },
+  {
+   "fieldname": "renewal_of_certificate_no",
+   "fieldtype": "Data",
+   "label": "Renewal of Certificate No"
+  },
+  {
+   "fieldname": "named_drivers",
+   "fieldtype": "Data",
+   "label": "Named Drivers"
+  },
+  {
+   "fieldname": "column_break_axzp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "basic_contribution",
+   "fieldtype": "Currency",
+   "label": "Basic Contribution"
+  },
+  {
+   "default": "0",
+   "fieldname": "ncd",
+   "fieldtype": "Currency",
+   "label": "NCD (0.00)"
+  },
+  {
+   "default": "0",
+   "fieldname": "extra_benefits",
+   "fieldtype": "Currency",
+   "label": "Extra Benefits"
+  },
+  {
+   "fieldname": "jumlah_kecil",
+   "fieldtype": "Currency",
+   "label": "Sub Total"
+  },
+  {
+   "fieldname": "service_tax",
+   "fieldtype": "Currency",
+   "label": "Service Tax"
+  },
+  {
+   "default": "10",
+   "fieldname": "stamp_duty",
+   "fieldtype": "Currency",
+   "label": "Stamp Duty"
+  },
+  {
+   "fieldname": "total_payable",
+   "fieldtype": "Currency",
+   "label": "Total Payable"
+  },
+  {
+   "default": "0",
+   "fieldname": "act_contribution",
+   "fieldtype": "Currency",
+   "label": "Act Contribution"
+  },
+  {
+   "fieldname": "e_hakmilik_section",
+   "fieldtype": "Section Break",
+   "label": "E Hakmilik"
+  },
+  {
+   "fieldname": "hp_serial_no",
+   "fieldtype": "Data",
+   "label": "HP Serial No"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-29 07:42:13.548400",
+ "modified_by": "alif.jefrey@mydotconsulting.com",
+ "module": "DMS Sales",
+ "name": "PAR",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "amirul.zulkefli@mydotconsulting.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

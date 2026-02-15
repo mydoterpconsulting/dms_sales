@@ -1,0 +1,98 @@
+[
+ {
+  "name": "JOHOR",
+  "state": "JOHOR",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "KEDAH",
+  "state": "KEDAH",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "KELANTAN",
+  "state": "KELANTAN",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "KUALA LUMPUR",
+  "state": "KUALA LUMPUR",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "LABUAN",
+  "state": "LABUAN",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "MELAKA",
+  "state": "MELAKA",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "NEGERI SEMBILAN",
+  "state": "NEGERI SEMBILAN",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PAHANG",
+  "state": "PAHANG",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PERAK",
+  "state": "PERAK",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PULAU PINANG",
+  "state": "PULAU PINANG",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PUTRAJAYA",
+  "state": "PUTRAJAYA",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "SABAH",
+  "state": "SABAH",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "SARAWAK",
+  "state": "SARAWAK",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "SELANGOR",
+  "state": "SELANGOR",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "TERENGGANU",
+  "state": "TERENGGANU",
+  "doctype": "State",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "WILAYAH PERSEKUTUAN",
+  "state": "WILAYAH PERSEKUTUAN",
+  "doctype": "State",
+  "module": "DMS Sales"
+ }
+]

@@ -1,0 +1,58 @@
+[
+ {
+  "name": "PERODUA ALZA",
+  "naming_series": "CM-.YYYY.-.#####",
+  "car_model": "PERODUA ALZA",
+  "doctype": "Car Model",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PERODUA ARUZ",
+  "naming_series": "CM-.YYYY.-.#####",
+  "car_model": "PERODUA ARUZ",
+  "doctype": "Car Model",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PERODUA ATIVA",
+  "naming_series": "CM-.YYYY.-.#####",
+  "car_model": "PERODUA ATIVA",
+  "doctype": "Car Model",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PERODUA AXIA",
+  "naming_series": "CM-.YYYY.-.#####",
+  "car_model": "PERODUA AXIA",
+  "doctype": "Car Model",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PERODUA AXIA (NEW)",
+  "naming_series": "CM-.YYYY.-.#####",
+  "car_model": "PERODUA AXIA (NEW)",
+  "doctype": "Car Model",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PERODUA BEZZA",
+  "naming_series": "CM-.YYYY.-.#####",
+  "car_model": "PERODUA BEZZA",
+  "doctype": "Car Model",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PERODUA MYVI",
+  "naming_series": "CM-.YYYY.-.#####",
+  "car_model": "PERODUA MYVI",
+  "doctype": "Car Model",
+  "module": "DMS Sales"
+ },
+ {
+  "name": "PERODUA TRAZ",
+  "naming_series": "CM-.YYYY.-.#####",
+  "car_model": "PERODUA TRAZ",
+  "doctype": "Car Model",
+  "module": "DMS Sales"
+ }
+]
