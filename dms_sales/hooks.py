@@ -183,7 +183,7 @@ fixtures = [
 # ------------
 
 # before_install = "dms_sales.install.before_install"
-# after_install = "dms_sales.install.after_install"
+after_install = "dms_sales.install.after_install"
 
 # Uninstallation
 # ------------
