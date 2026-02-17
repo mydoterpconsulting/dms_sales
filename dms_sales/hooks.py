@@ -91,6 +91,23 @@ fixtures = [
 	"car_color_type.json",
 	# Master Data - Car Models (Perodua vehicles)
 	"car_model.json",
+	# Workspaces
+	{
+		"dt": "Workspace",
+		"filters": [
+			[
+				"name",
+				"in",
+				[
+					"SA Manager",
+					"SA",
+					"Tutorial",
+					"SA Admin",
+					"HR DC Auto"
+				]
+			]
+		]
+	},
 ]
 
 # Each item in the list will be shown as an app in the apps page
