@@ -23,11 +23,6 @@ fixtures = [
 				"name",
 				"in",
 				[
-					# Workflow state fields
-					"VSO-workflow_state",
-					"Car Details And Checklist-workflow_state",
-					"Car Stock Request-workflow_state",
-					"SA Commission Claim Form-workflow_state",
 					# WooCommerce integration
 					"Address-woocommerce_id",
 					"Address-woocommerce_email",
