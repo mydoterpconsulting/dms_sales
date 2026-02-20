@@ -67,9 +67,6 @@ fixtures = [
 					"Employee-health_insurance_no",
 					# Other
 					"Contact-is_billing_contact",
-					"Print Settings-compact_item_print",
-					"Print Settings-print_uom_after_quantity",
-					"Print Settings-print_taxes_with_zero_amount",
 					"Project-total_expense_claim",
 					"Task-total_expense_claim",
 					"Terms and Conditions-hr",
